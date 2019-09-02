@@ -81,7 +81,7 @@ Component({
       type: Boolean,
       value: false
     },
-    dotTextcolor:{
+    dotTextcolor:{//指示点文字颜色
       type: String,
       value: '#333'
     }
