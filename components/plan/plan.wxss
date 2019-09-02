@@ -1,0 +1,20 @@
+.plan{
+  box-shadow: 2px 2px 20px 10px var(--greenShadow);
+  width:670rpx;
+  margin-left: 40rpx;
+}
+.plan_text{
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+}
+.plan_line{
+  height: 92rpx;
+  width: 6rpx;
+  background: linear-gradient(#47f9af,#2ae0c7)
+}
+.myLogo{
+  width: 80rpx;
+  height: 80rpx;
+  border:6rpx solid #47f9af
+}

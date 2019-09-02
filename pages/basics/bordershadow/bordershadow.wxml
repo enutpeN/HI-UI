@@ -1,0 +1,62 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >边框</view>
+</hi-custom>
+<tlite text="上边框"></tlite>
+<view class="border-t--gray text-center mg30 pd30 bold">
+<view>上</view>
+<view >类名:（border-t--gray）</view>
+</view>
+<tlite text="下边框"></tlite>
+<view class="border-b--gray text-center mg30 pd30 bold">
+<view>下</view>
+<view >类名:（border-b--gray）</view>
+</view>
+<tlite text="左边框"></tlite>
+<view class="border-l--gray text-center mg30 pd30 bold">
+<view>左</view>
+<view >类名:（border-l--gray）</view>
+</view>
+<tlite text="右边框"></tlite>
+<view class="border-r--gray text-center mg30 pd30 bold">
+<view>右</view>
+<view >类名:（border-r--gray）</view>
+</view>
+<tlite text="边框颜色"></tlite>
+<view class="border-a--gray text-center mg30 pd30 bold border-white">
+<view>白色</view>
+<view >类名:（border-white）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-gray">
+<view>灰色</view>
+<view >类名:（border-gray）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-black">
+<view>黑色</view>
+<view >类名:（border-black）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-red">
+<view>红色</view>
+<view >类名:（border-red）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-blue">
+<view>蓝色</view>
+<view >类名:（border-blue）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-green">
+<view>绿色</view>
+<view >类名:（border-green）</view>
+</view>
+<tlite text="边框类型"></tlite>
+<view class="border-a--gray text-center mg30 pd30 bold border-gray border-dashed">
+<view>虚线</view>
+<view >类名:（border-dashed）</view>
+</view>
+<view class="border-a--gray text-center mg30 pd30 bold border-gray border-dotted">
+<view>点虚线</view>
+<view >类名:（border-dotted）</view>
+</view>
+
+
+
+

@@ -1,0 +1,4 @@
+<view class="sup_box" style="height:{{height}}rpx;line-height: {{height}}rpx;top:{{top}}">
+  <view class="text_box" style="width:{{width}}rpx;">{{text}}</view>
+  <view class="{{iconClass}}"></view>
+</view>

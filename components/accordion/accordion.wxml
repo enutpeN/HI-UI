@@ -1,0 +1,16 @@
+<view class=" ">
+  <view class="r-center-l-nw  position-r" style="height:{{minHeight}}rpx;width:750rpx;{{showBorder?'border-bottom:1px solid #ddd;':''}}background:{{bgColor}}">
+   <view class="ml30 mr30"> {{ltext}} <slot class="Lcont"> </slot></view>
+   <view class="flex-1">{{ctext}}<slot class="Ccont"> </slot></view>
+   <view>{{rtext}} <slot class="Rcont"> </slot></view>
+   <view class="iconfont icon-danxia {{showcont?'xz':'xz1'}} mr20"  bindtap="show"></view>
+  </view>
+  <view  class="" style="overflow: hidden;transition: all 0.5s ease; {{showcont?'height:'+accorHeight :'height:0;'}} " >
+     <view class="pl30 pr30 pt20 pb20 mycont r-center-l-nw" style="background:{{item.bg}}; border-bottom:1px solid #fff;" wx:for="{{accorlist}}">
+       <image class="mr20" wx:if="{{showImg}}" style="height:50rpx;width:50rpx;" src="{{item.imgSrc}}"></image>
+       <view class="flex-1" > {{item.text}}</view>
+       <view wx:if="{{showRight}}" class=""> {{item.rtext}}</view>
+     </view>
+  </view>
+</view>
+

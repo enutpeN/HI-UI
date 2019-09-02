@@ -1,0 +1,11 @@
+<scroll-view class='pb100 animated fadeInDown' >
+  <image class='topImg' src="{{topImg}}"></image>
+  <view class='home-item animated bounceIn delay-{{item.time}}s r-center-l-nw ShadowSize blackShadow mg40' wx:for="{{homeData}}" data-i="{{index}}" catchtap='home_jump'>
+    <view class='w-30 c-center-c-nw'>
+      <image class='home-item-icon' src="{{item.item_iconSrc}}"></image>
+      <view class='bold'>{{item.item_name}}</view>
+    </view>
+    <image class='home-itemImg' mode='aspectFill' src="{{item.item_imgSrc}}"></image>
+  </view>
+</scroll-view>
+

@@ -1,0 +1,16 @@
+.sup_box{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background:rgba(51,51,51,0.53);
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  z-index: 10005;
+}
+.text_box{
+  text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+}

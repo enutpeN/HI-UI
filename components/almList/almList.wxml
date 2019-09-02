@@ -1,0 +1,37 @@
+<view class="r-center-l-nw you-class">
+  <movable-area style="height:{{minHeight}}rpx;width:690rpx;" >
+    <movable-view class="r-center-l-nw" out-of-bounds="true" direction="horizontal" x="{{x}}" damping="100" bindchange="chan1"   bindtouchend="chan2"  style="height:100rpx;width:750rpx;background:{{bgColor}}; {{showBorder?'border-bottom:1px solid #eee;':''}} " >
+      <image class="ml30" wx:if="{{imageshow}}" style="height:80rpx;width:80rpx;border-radius:50%;" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1820523987,3798556096&fm=26&gp=0.jpg"></image>
+      <view class="ml30" wx:if="{{!imageshow}}">
+        <view>{{leftText}}</view>
+        <slot name="LConte"></slot>
+      </view>
+      <view class="ml30 flex-1">
+        <view>{{centerText}}</view>
+        <slot name="cConte"></slot>
+      </view>
+      <view class="mr30">
+        <view>{{rightText}}</view>
+        <slot name="RConte"></slot>
+      </view>
+    </movable-view>
+  </movable-area>
+  <view class="text-center" wx:if="{{idefault==1}}" style="line-height:100rpx;height:100rpx;width:120rpx;background:{{btnBg}};color:#fff;">{{btnText1}}</view>
+  <view class="r-center-l-nw" wx:if="{{idefault==2}}">
+    <view class="text-center" style="line-height:100rpx;height:100rpx;width:100rpx;background:#ddd;color:#fff;border-right:1px solid #fff;">{{btnText2[0]}}</view>
+    <view class="text-center" style="line-height:100rpx;height:100rpx;width:100rpx;background:#ddd;color:#fff;">{{btnText2[1]}}</view>
+    <view class="text-center" style="line-height:100rpx;height:100rpx;width:100rpx;background:{{btnBg}};color:#fff;">{{btnText2[2]}}</view>
+  </view>
+   <view class="r-center-l-nw " wx:if="{{idefault==3}}" style="line-height:{{minHeight}}rpx;height:{{minHeight}}rpx;width:350rpx;background:{{iconbg}};color:#fff;">
+      <view class="mr10 ml10 r-center-c-nw" style="width:60rpx;height:60rpx;border-radius:50%;background:#fff;">
+        <text class="icon-dianzan1 iconfont color-black ft36"></text>
+      </view>
+      <view class="mr10 ml10 r-center-c-nw" style="width:60rpx;height:60rpx;border-radius:50%;background:#fff;">
+        <text class="icon-starempty iconfont color-black ft36"></text>
+      </view>
+      <view class="mr10 ml10 r-center-c-nw" style="width:60rpx;height:60rpx;border-radius:50%;background:#fff;">
+        <text class="icon-starempty iconfont color-black ft36"></text>
+      </view>
+   </view>
+</view>
+

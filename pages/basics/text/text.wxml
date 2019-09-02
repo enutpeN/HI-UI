@@ -1,0 +1,36 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >色彩</view>
+</hi-custom>
+<tlite text="文本对齐"></tlite>
+<view class="mg50 pd20" style="border:1px solid #333">
+  <view class="text-left mb30">文字居左 类名:<text class="bold">text-left</text></view>
+  <view class="text-center mb30">文字居中 类名:<text class="bold">text-center</text></view>
+  <view class="text-right ">文字居左 类名:<text class="bold">text-right</text></view>
+</view>
+<tlite text="文本大小"></tlite>
+<view class="r-center-b-nw pd20 text-center" wx:for="{{fontSize}}" style="border-bottom:1px solid #ccc">
+  <view class="flex-1 {{index==0?'bold':''}}">{{item.size}}</view>
+  <view class="flex-1 {{item.size}} {{index==0?'bold':''}}">{{item.yl}}</view>
+  <view class="flex-1 {{index==0?'bold':''}}">{{item.class}}</view>
+</view>
+<view class="pd20 color-ff0 text-right bold">注:类名以此类推 范围提供ft14-ft50</view>
+<tlite text="文本加粗"></tlite>
+<view class="r-center-a-nw pd20" style="border-bottom:1px solid #ccc">
+ <view class="bold">加粗</view>
+  <view class="bold">预览</view>
+  <view class="bold">bold</view>
+</view>
+<tlite text="文本换行"></tlite>
+<view class="mg50 pd20" style="border:1px solid #333">
+  <view class="mb10">文字一行类名:<text class="bold">ellipsis_one</text></view>
+  <view class="ellipsis_one mb30">（内容内容内容内容内容内容内容内容内容内容内容内容内容）</view>
+  <view class=" mb10">文字两行类名:<text class="bold">ellipsis_two</text></view>
+  <view class="ellipsis_two mb30">（内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容）</view>
+</view>
+<tlite text="文本颜色"></tlite>
+<view class="r-center-b-nw pd20 text-center" style="border-bottom:1px solid #ccc" wx:for="{{fontColor}}" style="{{index==fontColor.length-1?'background:black':''}}" >
+ <view class="bold flex-1 {{item.class}}">{{item.color}}</view>
+  <view class="bold flex-1 {{item.class}}">{{item.yl}}</view>
+  <view class="bold flex-1 {{item.class}}">{{item.class}}</view>
+</view>

@@ -1,0 +1,224 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wx4b1bd53354d92d18",
+	"projectname": "HIUI%E5%BA%93",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 23,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/component/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "卡片组件",
+					"pathName": "components/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "元素列表",
+					"pathName": "pages/basics/element/element",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "布局",
+					"pathName": "pages/basics/layout/layout",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tab组建",
+					"pathName": "components/tab/tab",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "hi-Custom组件",
+					"pathName": "components/custom/custom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "栏目组建",
+					"pathName": "components/plan/plan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "API说明",
+					"pathName": "pages/basics/apiText/apiText",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "标题栏",
+					"pathName": "components/tlite/tlite",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "悬浮框",
+					"pathName": "components/suspension/suspension",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "色彩",
+					"pathName": "pages/basics/color/color",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "文本",
+					"pathName": "pages/basics/text/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "色彩",
+					"pathName": "pages/basics/icon/icon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "边框",
+					"pathName": "pages/basics/bordershadow/bordershadow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "阴影",
+					"pathName": "pages/basics/shadow/shadow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "测试",
+					"pathName": "demo/pages/dark/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "组件目录",
+					"pathName": "pages/basics/components/components",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "星星打分组件",
+					"pathName": "components/stars/stars",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "列表",
+					"pathName": "components/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "宫格",
+					"pathName": "components/gongGe/gongGe",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "滑动删除",
+					"pathName": "components/almList/almList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "折叠面板",
+					"pathName": "components/accordion/accordion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "一般广告弹窗",
+					"pathName": "components/adMode/adMode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "轮播图",
+					"pathName": "components/swiper/swiper",
+					"scene": null
+				}
+			]
+		}
+	}
+}

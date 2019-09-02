@@ -1,0 +1,15 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >阴影</view>
+</hi-custom>
+<view  wx:for="{{shadowList}}">
+  <tlite text="{{item.name}}"></tlite>
+  <view class="pd30">
+    <view class="shadowItem text-center  {{item.class}}">{{item.class}}</view>
+  </view>
+</view>
+ <tlite text="图片阴影"></tlite>
+<view class="container">
+<image class="shadowImg "></image>
+<view class="mt20 text-center">使用参考 CSS </view>
+</view>

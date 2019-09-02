@@ -1,0 +1,12 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content">图标</view>
+</hi-custom>
+<view class="r-center-l-nw" style="flex-wrap:wrap;">
+  <view class="c-center-c-nw mt20" style="width:33.33%;" wx:for="{{iconList}}">
+    <view class="iconfont {{item.inconClass}}" ></view>
+    <view>{{item.name}}</view>
+    <view>{{item.inconClass}}</view>
+  </view>
+</view>
+

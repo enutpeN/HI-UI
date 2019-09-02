@@ -1,0 +1,10 @@
+<view class='{{flex_type}}  pd30  you-class' style='background-color:{{tlite_bg}} '>
+  <view class="r-center-l-nw">
+      <view class='tile-maru mr30' wx:if="{{icon_ty=='maru'}}" style='background-color:{{icon_bg}};border-radius: 100%;'></view>
+      <view class='tile-maru mr30' wx:if="{{icon_ty=='hose'}}" style='background-color:{{icon_bg}};'></view>
+      <view class='tile-maru mr30' wx:if="{{icon_ty=='chyo'}}" style='background-color:{{icon_bg}};width:8rpx;height:40rpx'></view>
+      <slot name="text"  style="color:{{textColor}}"></slot>
+      </view>
+  <view style="color:{{textColor}}">{{text}}</view>
+  <!-- <view class='tile-maru mr30' wx:if="{{icon_ty=='chyo'&&flex_type=='r-center-r-nw'}}" style='background-color:{{icon_bg}};width:8rpx;height:40rpx'></view> -->
+</view>

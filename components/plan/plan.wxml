@@ -1,0 +1,5 @@
+<view class="r-center-l-nw plan you-class animated flash " catchtap='jumpApi'>
+  <image class='myLogo' src="/image/plan_icon.jpg"></image>
+  <view class='flex-1 text-center plan_text'>详细API说明</view>
+  <view class='plan_line'></view>
+</view>

@@ -1,0 +1,7 @@
+.myge{
+  word-wrap:break-word;
+  height:auto;
+  line-height:1.3em;
+  box-sizing:border-box;
+  padding: 30rpx;
+}

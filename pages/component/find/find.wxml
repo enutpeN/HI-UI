@@ -1,0 +1,24 @@
+<scroll-view class='pb100 animated fadeInDown'>
+  <!-- <view class='find_item ml30 pd30 mb20' >
+     <view>HIUI问世制作 您的超级UI</view>
+     <image class='find_item_img mt20 mb20' src="/image/wh-item-bg-3.jpg"></image>
+     <view class='r-center-l-nw'>
+        <view class='r-center-c-nw flex-1'> <image class='find_icon' src="/image/find_icon0.png"></image> <view class='ml10'>15</view> </view>
+        <view class='r-center-c-nw flex-1'> <image class='find_icon' src="/image/find_icon1.png"></image> <view  class='ml10'>502</view></view>
+        <view class='r-center-c-nw flex-1'> <view  class='iconfont icon-dianzan'></view> <view  class='ml10'>1561</view></view>
+     </view>
+  </view> -->
+  <card
+   wx:if="{{hide}}"
+   wx:for="{{findData}}" 
+   wx:key="wh"
+   tilte="{{item.bt}}"
+   imsUrl="{{item.imgSrc}}"
+   forward="{{item.fx}}"
+   watch="{{item.gk}}"
+   like="{{item.dz}}"
+   catchlike="like"
+   catchcardTap="cardTap"
+   data-i="{{index}}"
+   ></card>
+</scroll-view>

@@ -1,0 +1,12 @@
+<view class="r-center-l-nw gongGebox flex-wrap  you-class" style="background:{{bgColor}}; {{goGeline?'border-top:1px solid rgba(0, 0, 0, .1)':''}};">
+  <view class="c-center-c-nw  gongItem pt20 pb20  {{goGeline?'':'noline'}}" wx:for="{{goGeList}}" style="width:{{goGewidth}}%;">
+    <view  wx:if="{{!showImg}}" class="goGeIcon {{item.iconClass}} color-008 mt10 " style="font-size:56rpx;">
+       <view wx:if="{{redNum>99&&bRedpint}}" class="redpint">99+</view>
+       <view wx:if="{{redNum<=99&&bRedpint}}" class="redpint">{{redNum}}</view>
+       <view wx:if="{{smRedpint}}" class="smRedpint"></view>
+    </view>
+    <image wx:else="{{showImg}}" src="{{item.src}}"></image>
+    <view class="mt10  text-center {{towh?'ellipsis_two  ':'ellipsis_one'}} w-100" style="{{towh?'width:100%;height:70rpx;':''}} " >{{item.text}}</view>
+  
+  </view>
+</view>

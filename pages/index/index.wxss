@@ -1,0 +1,54 @@
+.wh-tab{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+ 
+  box-shadow: 0 1rpx 6rpx var(--blackShadow);
+}
+.Half-mochi{
+ height: 26rpx;
+ width: 80rpx;
+ top:-21rpx;
+ left: 88rpx;
+ position: absolute;
+}
+.mochi:hover
+{
+left:500rpx;
+}
+.tab_item{
+  flex-grow: 1;
+  font-size: 24rpx;
+}
+.iconfont{
+  /* color: #ccc; */
+}
+.topImg{
+  width: 750rpx;
+  height: 445rpx;
+}
+.home-itemImg{
+  height: 200rpx;
+  width: 70%;
+  border-radius: 0 30rpx 30rpx 0;
+}
+.home-item{
+  width: 690rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  /* background: red; */
+  box-shadow: 2px 2px 20px 10px var(--blackShadow);
+}
+.home-item-icon{
+  width:100rpx;
+  height: 100rpx; 
+}
+.about_item_bg{
+  border-radius: 20rpx;
+  width: 620rpx;
+  height: 250rpx;
+  background-size: cover;
+  position: absolute;
+}

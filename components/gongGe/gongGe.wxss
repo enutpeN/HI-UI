@@ -1,0 +1,53 @@
+.gongGebox{
+  
+  box-sizing: border-box;
+ 
+}
+.gongItem{
+  position: relative;
+}
+.goGeIcon{
+  position: relative;
+}
+.redpint{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  right: auto;
+  background-color: #dd514c;
+  margin-left: 20rpx;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 20rpx;
+  padding:0 10rpx
+}
+.smRedpint{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  right: auto;
+  background-color: #dd514c;
+  margin-left: 24rpx;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 20rpx;
+  width: 18rpx;
+  height: 18rpx;
+}
+.gongItem:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 100%;
+	border-right: 1px solid rgba(0, 0, 0, .1);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	border-radius: inherit;
+	content: " ";
+
+	pointer-events: none
+}
+.noline:after{
+  border: 0;
+}

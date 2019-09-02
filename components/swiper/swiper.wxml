@@ -1,0 +1,15 @@
+<view class="position-r you-class">
+  <swiper class="{{swiperStyle}} " current="{{swiperCurrent}}" bindchange="swiperChange" style="width:{{imgWidth}};height:{{imgHeight}};"  circular="true"  previous-margin="{{animastyle=='threeD'&&swiperStyle!='Hi-swiper'?'70rpx':''}}" next-margin="{{animastyle=='threeD'&&swiperStyle!='Hi-swiper'?'70rpx':''}}">
+    <swiper-item wx:for="{{swiperStyle=='san-swiper'?sanImg:imgList}}"  >
+        
+        <image wx:if="{{swiperStyle=='san-swiper'}}" class="mr20 ml5" style="width:31%;height:100%;" src="{{swiperStyle=='san-swiper'?item.imgs[0]:item.src}}"></image>
+        <image wx:if="{{swiperStyle=='san-swiper'}}" class="mr20" style="width:31%;height:100%;ml10;" src="{{swiperStyle=='san-swiper'?item.imgs[1]:item.src}}"></image>
+        <image  wx:if="{{animastyle=='threeD'&&swiperStyle!='Hi-swiper'}}" class="slide-image {{swiperCurrent == index ? 'active' : 'quiet'}}"   style="{{swiperStyle=='san-swiper'?'width:31%;':'width:100%;'}}  height:100%;" src="{{swiperStyle=='san-swiper'?item.imgs[2]:item.src}}"></image>
+        <image wx:if="{{animastyle!='threeD'}}" class="slide-image {{swiperCurrent == index ? 'active' : ''}}"   style="{{swiperStyle=='san-swiper'?'width:31%;':'width:100%;'}}  height:100%;" src="{{swiperStyle=='san-swiper'?item.imgs[2]:item.src}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="dots" style=" justify-content:{{dotsStyle}};padding:{{dotsPadding}};{{dotsLoc}}:20rpx;">
+    <view class="dot text-center" style="background:{{dotBgcolor}};border-radius:{{dotRadius}};margin:{{dotMargin}};width:{{dotWidth}};height:{{dotHeight}};line-height:{{dotHeight}};color:{{dotTextcolor}}; {{index==swiperCurrent?'background:'+activBg+';':''}}" data-o="{{index}}" data-i="{{swiperCurrent}}" wx:for="{{swiperStyle=='san-swiper'?sanImg:imgList}}">{{dotText?index:''}}</view>
+  </view>
+</view>
+

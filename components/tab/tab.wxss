@@ -1,0 +1,3 @@
+.tile-maru{width: 15rpx;height: 15rpx;border-radius: 100%;background-color: var(--orange);}
+.tab-box{width: 100%;white-space: nowrap;box-sizing:border-box;}
+.tab-center-item{line-height: 95rpx;height:95rpx;padding: 0 20rpx;margin: 0 10rpx;box-sizing:border-box;text-align: center;}

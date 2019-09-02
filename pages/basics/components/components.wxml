@@ -1,0 +1,16 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-2 ">
+  <view slot="backText">返回</view>
+  <view slot="content" >组件</view>
+</hi-custom>
+<view class="bg ">
+  <view class="r-center-b-nw pd20 flex-wrap">
+    <view class="com-item pd20 mb20" wx:for="{{comsList}}" bindtap="gotoComps" data-i="{{index}}">
+      <view class="color-black bold mb10">{{item.mark}}</view>
+      <view class="c-center-c-nw mb30">
+          <image class="com-item-img" src="http://q.img.soukong.cn/wld/com-icon{{index}}.png"></image>
+      </view>
+      <view  class="color-black bold text-center mb20">{{item.name}}</view>
+      <stars></stars>
+    </view>
+  </view>
+</view>

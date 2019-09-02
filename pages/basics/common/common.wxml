@@ -1,0 +1,192 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content"  >{{title}}</view>
+</hi-custom>
+
+
+<!-- 常见导航页 -->
+<view wx:if="{{titleIndex=='0'}}">
+<hi-plan you-class="mt30" apiData="{{tab_apiList_value}}" apiData_tow="{{tab_apiList_value_tow}}" apiData_three="{{tab_apiList_value_three}}" apiData_four="{{tab_apiList_value_four}}"></hi-plan>
+  <tab t_tlite_text="居中" tab_item="{{tabArr0}}" bindtabs="tabs"></tab>
+  <tab t_tlite_text="平分" tab_item="{{tabArr1}}" flex="flex-1" ></tab>
+  <tab t_tlite_text="背景" tab_item="{{tabArr2}}" flex="flex-1" bd_Color="var(--white)" textColor="var(--white)" bc_color="var(--green)" ></tab>
+  <tab t_tlite_text="图标" tab_item="{{tabArr3}}" tab_flex_type="r-center-c-nw"  iconColor="var(--white)" flex="flex-1" bd_Color="var(--white)" textColor="var(--white)" bc_color="var(--red)" ></tab>
+  <tab t_tlite_text="组合" tab_item="{{tabArr4}}" tab_flex_type="r-center-c-nw"  iconColor="var(--white)" flex="flex-1" bd_Color="var(--white)" textColor="var(--white)" bc_color="var(--red)" ></tab>
+</view>
+
+<!-- 特殊导航页 -->
+<view wx:if="{{titleIndex=='1'}}">
+<hi-plan you-class="mt30" apiData="{{s_tab_apiList_value}}" apiData_tow="{{s_tab_apiList_value_tow}}" apiData_three="{{s_tab_apiList_value_three}}" apiData_four="{{s_tab_apiList_value_four}}"></hi-plan>
+  <tlite text="普通顶部导航" you-class="mt30"></tlite>
+  <hi-custom isBack="{{false}}" bgColor="bg-top-4" you-class="dome">
+    <view slot="backText">返回</view>
+    <view slot="content"  >普通</view>
+  </hi-custom>
+  <tlite text="带返回按键的顶部导航" you-class="mt20"></tlite>
+  <hi-custom isBack="{{true}}" bgColor="bg-top-3" you-class="dome1">
+    <view slot="backText">返回</view>
+    <view slot="content"  >演示</view>
+  </hi-custom>
+  <tlite text="带图标的顶部导航" you-class="mt20"></tlite>
+  <hi-custom  isCustom="{{true}}" bgColor="bg-top-2" you-class="dome1">
+    <view slot="backText">返回</view>
+    <view slot="content"  >演示</view>
+  </hi-custom>
+</view>
+
+<!-- 栏目条页 -->
+<view wx:if="{{titleIndex=='2'}}">
+<hi-plan you-class="mt30" apiData="{{tlite_apiList_value}}" apiData_tow="{{tlite_apiList_value_tow}}" apiData_three="{{tlite_apiList_value_three}}" apiData_four="{{tlite_apiList_value_four}}"></hi-plan>
+  <tlite text="栏目条" you-class="mt30"></tlite>
+  <view class="text-center mt20 color-008">默认（左对齐 圆形小图形）</view>
+  <tlite text="栏目条" you-class="mt30" icon_ty="hose" icon_bg="var(--blue)"></tlite>
+  <view class="text-center mt20 color-008">小图形为方形</view>
+  <tlite text="栏目条" you-class="mt30" icon_ty="chyo" icon_bg="var(--cyan)"></tlite>
+  <view class="text-center mt20 color-008">小图形竖条</view>
+  <tlite text="栏目条" you-class="mt30" icon_bg="var(--purple)" flex_type="r-center-c-nw"></tlite>
+  <view class="text-center mt20 color-008">中间对齐</view>
+  <tlite text="栏目条" you-class="mt30" icon_bg="var(--purple)" flex_type="r-center-r-nw" ></tlite>
+  <view class="text-center mt20 color-008">右间对齐</view>
+  <tlite text="栏目条" you-class="mt30" icon_bg="var(--purple)" flex_type="r-center-a-nw" >
+    <view slot="text">插槽</view>
+  </tlite>
+  <view class="text-center mt20 color-008">平分对齐(带插槽)</view>
+  <tlite text="栏目条" you-class="mt30" icon_bg="var(--purple)" flex_type="r-center-b-nw" >
+      <view slot="text">插槽</view>
+  </tlite>
+  <view class="text-center mt20 mb20 color-008">间距对齐(带插槽)</view>
+  <htmltowxml text="{{tlite}}"  type="markdown"  highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
+</view>
+
+<!-- 栏目条页 -->
+<view wx:if="{{titleIndex=='3'}}">
+<hi-plan you-class="mt30" apiData="{{search_apiList_value}}" apiData_tow="{{search_apiList_value_tow}}" apiData_three="{{search_apiList_value_three}}" apiData_four="{{search_apiList_value_four}}"></hi-plan>
+  <search you-class="mt50 mb30"></search>
+  <view class="text-center mt20 mb20 color-008">默认</view>
+  <search searchBtn="button"></search>
+   <view class="text-center mt20 mb20 color-008">按钮模式</view>
+  <search avatar="{{true}}"></search>
+   <view class="text-center mt20 mb20 color-008">带头像</view>
+    <search avatar="{{true}}" bgColor="#0081ff"></search>
+   <view class="text-center mt20 mb20 color-008">背景色</view>
+    <search avatar="{{true}}" bgColor="#39b54a" searchRadius='10'></search>
+   <view class="text-center mt20 mb20 color-008">搜索框方角</view>
+    <search  searchBtn="picker" bgColor="#fbbd08" searchRadius='10'></search>
+   <view class="text-center mt20 mb20 color-008">城市picker按钮模式</view>
+    <search   bgColor="#e54d42" searchRadius='10'>
+      <view class="ml30" slot="l-myIcon">插槽（左边）</view>
+    </search>
+   <view class="text-center mt20 mb20 color-008">自定义左插槽</view>
+    <search   bgColor="#6739b6" searchRadius='10'>
+      <view  slot="r-myIcon">插槽（右边）</view>
+    </search>
+   <view class="text-center mt20 mb20 color-008">自定义右插槽</view>
+</view>
+
+<!-- 列表栏 -->
+<view wx:if="{{titleIndex=='4'}}">
+   <hi-plan you-class="mt30" apiData="{{list_apiList_value}}" apiData_tow="{{list_apiList_value_tow}}" apiData_three="{{list_apiList_value_three}}" apiData_four="{{list_apiList_value_four}}"></hi-plan>
+   <list you-class="mt50"> </list>
+   <view class="text-center mt20 mb20 color-008">默认</view>
+  <list you-class="mt50" imgRadius="100%"> </list>
+   <view class="text-center mt20 mb20 color-008">圆图模式</view>
+   <list you-class="mt50" list_leftImg="{{false}}"> </list>
+   <view class="text-center mt20 mb20 color-008">文字模式</view>
+    <list you-class="mt50" listRighIcon="{{false}}" listLeftText="8月" listLeftText2="11:54" listCenterText="代理商" listCenterText2="1863251XXXX" listRightText="订单号" listRightText2="5206203152" list_leftImg="{{false}}"> </list>
+   <view class="text-center mt20 mb20 color-008">文字模式2</view>
+   <list you-class="mt50" bgColor="#fbbd08"> </list>
+   <view class="text-center mt20 mb20 color-008">背景色</view>
+   <list you-class="mt50" bgColor="#8dc63f" listWidth="690rpx"> </list>
+   <view class="text-center mt20 mb20 color-008">左右间距模式</view>
+   <list you-class="mt50" listPaddingTb="30"  listRighIcon="{{false}}" listWidth="690rpx" imgHeight="150rpx"  imgWidth="150rpx" listSp="{{true}}"> </list>
+   <view class="text-center mt20 mb20 color-008">商品详情模式</view>
+    <list you-class="mt50" listPaddingTb="30" listRighIcon="{{false}}" border_b="{{true}}"  bor_bColor="#333" imgHeight="150rpx"  imgWidth="150rpx" listSp="{{true}}"> </list>
+   <view class="text-center mt20 mb20 color-008">底部边框</view>
+</view>
+
+<!-- 宫格栏 -->
+<view wx:if="{{titleIndex=='5'}}">
+   <hi-plan you-class="mt30" apiData="{{gongGe_apiList_value}}" apiData_tow="{{gongGe_apiList_value_tow}}" apiData_three="{{gongGe_apiList_value_three}}" apiData_four="{{gongGe_apiList_value_four}}"></hi-plan>
+   <gongGe you-class="mt80" gorowNum="3"  ></gongGe>
+   <view class="text-center mt20 mb20 color-008">每行三列</view>
+   <gongGe  gorowNum="4" goGeline="true"></gongGe>
+   <view class="text-center mt20 mb20 color-008">每行四列(可带网格可不带)</view>
+   <gongGe  gorowNum="3" bgColor="#bdc3c7"></gongGe>
+   <view class="text-center mt20 mb20 color-008">背景色</view>
+    <gongGe  gorowNum="3" bgColor="#ACB6E5" smRedpint="true"></gongGe>
+   <view class="text-center mt20 mb20 color-008" >带角标</view>
+    <gongGe  gorowNum="3" bgColor="#74ebd5" bRedpint="true"></gongGe>
+   <view class="text-center mt20 mb20 color-008" >数字角标</view>
+     <gongGe  gorowNum="3" bgColor="#cbb4d4" bRedpint="true" redNum="105"></gongGe>
+   <view class="text-center mt20 mb20 color-008" >数字超过99自动99+</view>
+</view>
+
+<!-- 左滑栏 -->
+<view wx:if="{{titleIndex=='6'}}">
+  <hi-plan you-class="mt30 mb50" apiData="{{slideview_apiList_value}}" apiData_tow="{{slideview_apiList_value_tow}}" apiData_three="{{slideview_apiList_value_three}}" apiData_four="{{slideview_apiList_value_four}}"></hi-plan>
+  <almList></almList>
+  <view class="text-center mt20 mb20 color-008" >默认</view>
+  <almList idefault="2"></almList>
+  <view class="text-center mt20 mb20 color-008" >多文字</view>
+  <almList idefault="3"></almList>
+  <view class="text-center mt20 mb20 color-008" >图标</view>
+  <almList  bgColor="linear-gradient(45deg, #f5f7f8, #a7daeefb)"></almList>
+  <view class="text-center mt20 mb20 color-008" >背景</view>
+  <almList imageshow="{{false}}" bgColor="linear-gradient(to right,#8360c3,#2ebf91)"></almList>
+  <view class="text-center mt20 mb20 color-008" >文字模式</view>
+  <almList imageshow="{{false}}" bgColor="linear-gradient(45deg, #ec008c, #6739b6)">
+    <view slot="LConte" class="color-white">左下方插槽</view>
+    <view slot="cConte" class="color-white">中间下方插槽</view>
+    <view slot="RConte" class="color-white">右下方插槽</view>
+  </almList>
+  <view class="text-center mt20 mb20 color-008" >插槽位</view>
+</view>
+
+<!-- 折叠面板 -->
+<view wx:if="{{titleIndex=='7'}}">
+  <hi-plan you-class="mt30 mb50" apiData="{{accordion_apiList_value}}" apiData_tow="{{accordion_apiList_value_tow}}" apiData_three="{{accordion_apiList_value_three}}" apiData_four="{{accordion_apiList_value_four}}"></hi-plan>
+  <accordion></accordion>
+   <view class="text-center mt20 mb20 color-008" >默认</view>
+   <accordion ctext="中间内容"></accordion>
+   <view class="text-center mt20 mb20 color-008"  >中间带文字</view>
+   <accordion rtext="右边内容"></accordion>
+   <view class="text-center mt20 mb20 color-008" >右边带文字</view>
+   <accordion  bgColor="linear-gradient(to right,#DCE35B,#45B649)"></accordion>
+   <view class="text-center mt20 mb20 color-008" >背景色</view>
+   <accordion   bgColor='linear-gradient(45deg, #fffbd5, #b20a2c)' showImg="{{true}}" showRight="{{true}}"></accordion>
+   <view class="text-center mt20 mb20 color-008">子盒子带头像和右边内容</view>
+   <accordion  showImg="{{true}}" showRight="{{true}}"></accordion>
+   <accordion  showImg="{{true}}" showRight="{{true}}"></accordion>
+   <accordion  showImg="{{true}}" showRight="{{true}}"></accordion>
+   <view class="text-center mt20 mb20 color-008">手风琴</view>
+</view>
+
+<!-- 海报图 -->
+<view wx:if="{{titleIndex=='8'}}">
+  <hi-plan you-class="mt30 mb100" apiData="{{gongGe_apiList_value}}" apiData_tow="{{gongGe_apiList_value_tow}}" apiData_three="{{gongGe_apiList_value_three}}" apiData_four="{{gongGe_apiList_value_four}}"></hi-plan>
+  <adMode showAd="{{moshow}}" catchtapAd="tapImg"></adMode>
+  <view class="text-center mt20 mb20 adbtn mt100" bindtap="moshow">默认（点击按钮）</view>
+  <adMode showAd="{{leftShow}}" close="left"></adMode>
+  <view class="text-center mt20 mb20 adbtn" bindtap="leftShow">关闭在左</view>
+   <adMode showAd="{{topShow}}" close="top"></adMode>
+  <view class="text-center mt20 mb20 adbtn" bindtap="topShow">关闭在上</view>
+   <adMode showAd="{{rightShow}}" close="right"></adMode>
+  <view class="text-center mt20 mb20 adbtn" bindtap="rightShow">关闭在右</view>
+</view>
+
+<!-- 轮播图 -->
+<view wx:if="{{titleIndex=='9'}}">
+  <hi-plan you-class="mt30 mb100" apiData="{{gongGe_apiList_value}}" apiData_tow="{{gongGe_apiList_value_tow}}" apiData_three="{{gongGe_apiList_value_three}}" apiData_four="{{gongGe_apiList_value_four}}"></hi-plan>
+  <hi-swiper></hi-swiper>
+  <view class="text-center mt20 mb20 color-008">默认</view>
+    <hi-swiper you-class="mt20 mb20"   dotBgcolor="#9c26b0" activBg="#fff" dotRadius="50%" dotWidth="20rpx;" dotHeight="20rpx;"></hi-swiper>
+     <hi-swiper you-class="mt20 mb20"  dotText dotBgcolor="rgba(0,0,0,0.3)" activBg="linear-gradient(to right,#8360c3,#2ebf91)"  dotTextcolor="#fff" dotsStyle="flex-end" dotRadius="50%" dotWidth="50rpx;" dotHeight="50rpx;"></hi-swiper>
+      <hi-swiper you-class="mt20 mb20" dotBgcolor="#9c26b0" activBg="#fff" dotRadius="0rpx" dotWidth="30rpx;" dotHeight="30rpx;"></hi-swiper>
+  <view class="text-center mt20 mb20 color-008" >样式一（指示点自定义）</view>
+   <hi-swiper animastyle="threeD"></hi-swiper>
+  <view class="text-center mt20 mb20 color-008">样式二(3D切换)</view>
+   <hi-swiper swiperStyle="san-swiper"></hi-swiper>
+  <view class="text-center mt20 mb20 color-008">样式三</view>
+  <hi-swiper swiperStyle="Hi-swiper"></hi-swiper>
+  <view class="text-center mt20 mb20 color-008">样式四</view>
+</view>

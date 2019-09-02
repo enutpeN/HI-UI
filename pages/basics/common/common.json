@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "tab":"/components/tab/tab",
+    "search": "/components/search/search",
+    "list": "/components/list/list",
+    "gongGe": "/components/gongGe/gongGe",
+    "almList":"/components/almList/almList",
+    "accordion": "/components/accordion/accordion",
+    "adMode":"/components/adMode/adMode",
+    "hi-swiper":"/components/swiper/swiper"
+  }
+}

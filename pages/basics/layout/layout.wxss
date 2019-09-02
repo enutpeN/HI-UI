@@ -1,0 +1,5 @@
+.flex-block{box-sizing: border-box;height: 120rpx;width: 100%;border: 1px solid #ccc  ; padding: 30rpx;}
+.flex-block-c{box-sizing: border-box;height: 140rpx;width: 100%;border: 1px solid #ccc  ; padding: 30rpx;}
+.flex-block-d{box-sizing: border-box;height: 200rpx;width: 100%;border: 1px solid #ccc  ; padding: 30rpx;}
+.flex-exitem{width: 90rpx;height: 60rpx;background-color: #fff;border-radius: 10rpx;text-align: center;line-height: 60rpx;background: var(--gradualBlue);color: #fff;}
+.flex-exitemBig{width: 150rpx;height: 140rpx;background-color: #fff;border-radius: 10rpx;text-align: center;line-height: 140rpx;background: var(--gradualBlue);color: #fff;}

@@ -1,0 +1,19 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >加载</view>
+</hi-custom>
+<view class="bold ft28 text-center mt30" style="color:#fff">说明:使用必须关联loaders.min.wxss</view>
+<view class="bold ft28 text-center mt30" style="color:#fff"> 使用格式: 父盒子class="loader-inner +下列 lodading的类名" 子盒子的个数等于下列lodading的数字 </view>
+<view class="r-center-l-nw " style="flex-wrap:wrap" >
+    <view class="pt20 pb20" style="width:33.33%;" wx:for="{{loadingList}}">  
+      <view class="loading_box c-center-c-nw">
+        <view class="loader-inner {{item.class}}"  data-i="{{item.list}}">
+            <view wx:for="{{item.list}}" ></view>
+        </view>
+      </view>
+      <view class="text-center" style="color:#fff">{{item.text}}</view>
+      <view class="text-center" style="color:#fff">{{item.class}} {{item.list.length}}</view>
+    </view>
+</view>
+<view class="bold ft30 text-center mt30" style="color:#fff">此loading 源码于 https://github.com/ConnorAtherton/loaders.css 原作者（本人修改为小程序版） </view>
+

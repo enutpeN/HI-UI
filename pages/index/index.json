@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "home":"/pages/component/home/home",
+    "find": "/pages/component/find/find",
+    "about":"/pages/component/about/about"
+  },
+  "navigationBarTitleText": "HIUI"
+}

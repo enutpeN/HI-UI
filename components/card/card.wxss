@@ -1,0 +1,13 @@
+.find_item{
+  box-shadow: 2px 2px 20px 10px var(--blackShadow);
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.find_item_img{
+  width: 630rpx;
+  height: 260rpx;
+}
+.find_icon{
+  width: 64rpx;
+  height: 64rpx;
+}

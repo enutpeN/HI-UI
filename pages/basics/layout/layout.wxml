@@ -1,0 +1,64 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >布局</view>
+</hi-custom>
+<!-- <hi-plan you-class="mt30" apiData="{{apiList_value}}" apiData_tow="{{apiList_value_tow}}" apiData_three="{{apiList_value_three}}" apiData_four="{{apiList_value_four}}"></hi-plan> -->
+<tlite text="常用flex布局"></tlite>
+<view class="ml30 mb20 bold">1.水平对齐</view>
+<view class="ml30 mb20">A.水平轴居中-从左到右-不换行（r-center-l-nw）</view>
+<view class="flex-block r-center-l-nw">
+  <view class="flex-exitem mr30">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">B.水平轴居中-居中对齐-不换行（r-center-c-nw）</view>
+<view class="flex-block r-center-c-nw">
+  <view class="flex-exitem mr30">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">C.水平轴居中-两端对齐-不换行（r-center-b-nw）</view>
+<view class="flex-block r-center-b-nw">
+  <view class="flex-exitem mr30">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">D.水平轴居中-从右到左-不换行（r-center-a-nw）</view>
+<view class="flex-block r-center-a-nw">
+  <view class="flex-exitem mr30">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">F.水平轴居中-从右到左-不换行（r-center-r-nw）</view>
+<view class="flex-block r-center-r-nw">
+  <view class="flex-exitem mr30">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+
+<view class="ml30 mb20 bold mt20">2.纵向对齐</view>
+<view class="ml30 mb20">A.纵轴居中-从左到右-不换行（c-center-l-nw）</view>
+<view class="flex-block-c c-center-l-nw">
+  <view class="flex-exitem mb10">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">B.纵轴居中-居中对齐-不换行（c-center-c-nw）</view>
+<view class="flex-block-c c-center-c-nw">
+  <view class="flex-exitem mb10">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">C.纵轴居中-从右到左-不换行（c-center-r-nw）</view>
+<view class="flex-block-c c-center-r-nw">
+  <view class="flex-exitem mb10">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">D.上对其-不换行（c-top-l-nw）</view>
+<view class="flex-block-d c-top-l-nw">
+  <view class="flex-exitemBig mr10">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">E.居中对齐-不换行（c-top-c-nw）</view>
+<view class="flex-block-d c-top-c-nw">
+  <view class="flex-exitemBig mr10">box</view>
+  <view class="flex-exitem">box</view>
+</view>
+<view class="ml30 mb20 mt20">F.下对齐-不换行（c-top-r-nw）</view>
+<view class="flex-block-d c-top-r-nw">
+  <view class="flex-exitemBig mr10">box</view>
+  <view class="flex-exitem">box</view>
+</view>

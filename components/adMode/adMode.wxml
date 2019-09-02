@@ -1,0 +1,9 @@
+<view class="mask {{showAd?'myfadeIn':'myfadeOut'}} animated"  bindtap="hideAd" >
+  <view class="position-center">
+    <view wx:if="{{close=='top'&&showAd}}" class="iconfont icon-guanbi text-center color-white mb20" bindtap="hideAd"></view>
+    <view wx:if="{{close=='right'&&showAd}}" class="iconfont icon-guanbi1 text-right color-white ft50" style="font-size:70rpx" bindtap="hideAd"></view>
+    <view wx:if="{{close=='left'&&showAd}}" class="iconfont icon-guanbi1 text-left color-white ft50" style="font-size:70rpx" bindtap="hideAd"></view>
+    <image   style="{{showAd?'height:'+imgHeight+'rpx;width:'+imgWidth+'rpx;border-radius:15rpx;':'height:0rpx;width:0rpx;'}} transition: all 0.8s ease;" src="{{imgSrc}}" catchtap="tapAd"></image>
+    <view wx:if="{{close=='bottom'&&showAd}}" class="iconfont icon-guanbi text-center color-white mt20" bindtap="hideAd"></view>
+  </view> 
+</view>

@@ -1,0 +1,21 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content" >色彩</view>
+</hi-custom>
+<!-- <hi-plan you-class="mt30" apiData="{{apiList_value}}" apiData_tow="{{apiList_value_tow}}" apiData_three="{{apiList_value_three}}" apiData_four="{{apiList_value_four}}"></hi-plan> -->
+<tlite text="常用颜色"></tlite>
+<view class="r-center-l-nw pd20 flex-wrap ">
+  <view class="color-item c-center-c-nw mb15 {{(index+1)%3!=0||index==0?'mr15':''}}" wx:for="{{textColor_list}}">
+    <view class="r-center-b-nw w-100 ft24 bold"> <view class="ml20" style="color:{{item.color!='#ffffff'?item.color:'#333'}};" >color</view> <view class="mr20" style="{{index>=15?'color:#ccc':''}}">{{item.color}}</view> </view>
+    <view class="maru-item" style="background:{{item.color}};{{item.color=='#ffffff'?'border: 1px solid #333':''}}"></view>
+    <view class="r-center-b-nw w-100  ft24 bold"> <view class="ml20" style="{{index>=15?'color:#ccc':''}}">色彩</view>  <view class="mr20" style="color:{{item.color!='#ffffff'?item.color:'#333'}}">{{item.colorName}}</view> </view>
+  </view>
+</view>
+<tlite text="渐变色"></tlite>
+<view class="r-center-l-nw pd20 flex-wrap ">
+  <view class="color-item c-center-c-nw mb15 {{(index+1)%3!=0||index==0?'mr15':''}}" wx:for="{{linearColor_list}}">
+    <view class="r-center-b-nw w-100 ft24 bold"> <view class="ml20" style="color:{{item.color!='#ffffff'?item.color:'#333'}};" >color</view> <view class="mr20" style="{{index>=15?'color:#ccc':''}}">{{item.color}}</view> </view>
+    <view class="maru-item2" style="background:linear-gradient(to right,{{item.color1}}{{item.color2}}{{item.color3}});"></view>
+    <view class="r-center-b-nw w-100  ft24 bold"> <view class="ml20" style="{{index>=15?'color:#ccc':''}}">色彩</view>  <view class="mr20" style="color:{{item.color!='#ffffff'?item.color:'#333'}}">{{item.colorName}}</view> </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!-- <view class='pl30 pr30 pt30 ft32 bold'>{{apititle}}：</view>
+<view class=' ft30 bold color-666' style='display:table;width:100%;'>
+  <view class=' pd30 border-b-one-black w-25 text-center' wx:for="{{apiList}}" style='display:table-cell;max-width:150rpx;vertical-align:middle'>{{item}}</view>
+  <view class='flex-1'></view>
+</view>
+<view class=' ft28  ' style='display:table;width:100%;' wx:for="{{hi_Api}}">
+  <view class=' pd30 border-b-one-gray w-25 text-center'  wx:for="{{item.apiList_value}}" wx:for-index="idx" wx:for-item="apiValue" style='display:table-cell;max-width:150rpx;vertical-align:middle;color:{{idx==0?"#00ccff":""}};'>{{apiValue.value}}</view>
+</view> -->
+<view class='pl30 pr30 pt30 ft32 bold'>{{apititle}}：</view>
+<view class=' ft30 bold color-666 r-center-l-nw' >
+  <view class=' pd30  border-b--gray border-black w-25  flex-1' wx:for="{{apiList}}" style='word-wrap:break-word;'>{{item}}</view>
+  <view class=''></view>
+</view>
+<view class=' ft28  r-center-l-nw border-b--gray' wx:for="{{hi_Api}}">
+  <view class='  w-25 flex-1 myge'  wx:for="{{item.apiList_value}}" wx:for-index="idx" wx:for-item="apiValue" style='color:{{idx==0?"#00ccff":""}};'>{{apiValue.value}}</view>
+</view>

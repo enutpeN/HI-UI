@@ -1,0 +1,12 @@
+<view class="r-center-b-nw you-class" style="min-height:100rpx;background-color:{{bgColor}}">
+  <image wx:if="{{avatar}}" class="search-avatar ml30"  src="{{avatarSrc}}"></image>
+  <slot name="l-myIcon"></slot>
+  <view class="r-center-l-nw search-box flex-1" style="border-radius:{{searchRadius}}rpx;">
+    <view class="icon-sousuo iconfont ft26 mr10"></view>
+    <input placeholder="{{placeholder}}"></input>
+  </view>
+  <slot name="r-myIcon"></slot>
+  <view wx:if="{{searchBtn=='default'}}" class="mr30 btn-active">搜索</view>
+  <button wx:if="{{searchBtn=='button'}}" class="mr30 btn-active" style="background-color:{{btnBg}};color:{{btnColor}};height:64rpx; line-height: 64rpx;width:{{btnWidth}}rpx ">搜索</button>
+  <picker wx:if="{{searchBtn=='picker'}}" class="mr30 "><text>城市</text><text class="icon-shixia iconfont ft30"></text></picker>
+</view>

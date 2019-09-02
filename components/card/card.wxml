@@ -1,0 +1,9 @@
+  <view class='find_item ml30 pd30 mb20' style='hieght:{{cardHieght}}rpx;width:{{cardWidth}}rpx;' catchtap='cardTap' >
+     <view>{{tilte}}</view>
+     <image class='find_item_img mt20 mb20' src="{{imsUrl}}"></image>
+     <view class='r-center-l-nw'>
+        <button open-type='share' class='r-center-c-nw flex-1' catchtap='share'> <image class='find_icon' src="/image/find_icon0.png"></image> <view class='ml10'>{{forward}}</view> </button>
+        <view class='r-center-c-nw flex-1' > <image class='find_icon' src="/image/find_icon1.png"></image> <view  class='ml10'>{{watch}}</view></view>
+        <view class='r-center-c-nw flex-1' catchtap='like' style='color:{{likeFlag?"blue":"#666"}}'> <view  class='iconfont icon-dianzan' ></view> <view  class='ml10'>{{like}}</view></view>
+     </view>
+  </view>  

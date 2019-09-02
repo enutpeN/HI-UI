@@ -1,0 +1,36 @@
+.box{
+  box-sizing: border-box;
+}
+/* .child {
+  transition: all 0.5s ease;
+  height: auto; 
+  overflow: hidden;
+  opacity:1;
+
+} */
+/* .xz{
+   transition: all .6s ease;
+ 
+} */
+.xz {
+   transition: all .3s ease;
+   transform: rotate(180deg)
+
+}
+.xz1 {
+  /* animation-name: xz; */
+   transition: all .3s ease;
+   transform: rotate(90eg)
+
+}
+/* @keyframes xz{
+   0%{transform: rotate(180deg);}
+    25%{transform: rotate(135deg);}
+    50%{transform: rotate(90deg);}
+    75%{transform: rotate(45deg);}
+    100%{transform: rotate(0deg);}
+} */
+.hide {
+  height: 0;
+  /* opacity:0; */
+}

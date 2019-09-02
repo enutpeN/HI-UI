@@ -1,0 +1,23 @@
+page{background-color: var(--ghostWhite)}
+.dome{
+  position: relative !important;
+  margin: 20rpx 0rpx;
+  /* top: 20% !important; */
+}
+.dome1{
+  position: relative !important;
+  margin: 20rpx 0rpx;
+  /* top: 60% !important; */
+}
+.adbtn{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
+  border-radius: 30rpx;
+  margin: 20rpx auto;
+  color: #fff;
+ 
+
+}
+

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/basics/element/element",
+    "pages/basics/layout/layout",
+    "pages/basics/common/common",
+    "pages/basics/apiText/apiText",
+    "components/suspension/suspension",
+    "pages/basics/color/color",
+    "pages/basics/text/text",
+    "pages/basics/icon/icon",
+    "pages/basics/bordershadow/bordershadow",
+    "pages/basics/loading/loading",
+    "pages/basics/shadow/shadow",
+    "pages/basics/components/components"
+  ],
+  "window": {
+  
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "hi-custom": "/components/custom/custom",
+    "hi-plan": "/components/plan/plan",
+    "hi-api": "/components/tabApi/tabApi",
+    "tlite": "/components/tlite/tlite"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content">{{title}}</view>
+</hi-custom>
+<hi-api hi_Api="{{apiList_value}}"></hi-api>
+<hi-api hi_Api="{{apiList_value_tow}}"  apititle="slot插槽" apiList="{{['插槽名','说明']}}"></hi-api>
+<hi-api hi_Api="{{apiList_value_three}}"  apititle="外联样式" apiList="{{['属性名','说明']}}"></hi-api>
+<hi-api hi_Api="{{apiList_value_four}}" apititle="组件方法" apiList="{{['方法名','参数和释义','说明']}}"></hi-api>

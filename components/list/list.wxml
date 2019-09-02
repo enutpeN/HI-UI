@@ -1,0 +1,34 @@
+<view class="{{listWidth!='100%'?'ml30':''}} you-class" style="{{border_b?'border-bottom:1px solid' + bor_bColor:''}};padding:{{listPaddingTb}}rpx {{listPaddingLr}}rpx;border-radius:{{listRadius}};background-color:{{bgColor}};width:{{listWidth}};box-sizing: border-box;">
+  <view class="r-center-l-nw" wx:if="{{listSp}}">
+    <view class="flex-1 r-center-l-nw">
+      <!-- <view class="iconfont icon-taobao" ></view> -->
+      <image class="mr20" style="height:50rpx;width:50rpx;" src="{{topImgsrc}}"></image>
+      <view>{{topLText}}</view>
+      <view class="iconfont icon-danyou color-aaa"></view>
+    </view>
+    <view style="color:{{topRtColor}}">{{topRText}}</view>
+  </view>
+  <view class=" {{flex_type}} mt20 mb20">
+    <image class="list-img" wx:if="{{list_leftImg}}" style="height:{{imgHeight}};width:{{imgWidth}};border-radius:{{imgRadius}};" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2771201017,181968610&fm=26&gp=0.jpg"></image>
+     <view class="c-center-l-nw" wx:if="{{!list_leftImg}}">
+      <view class="ellipsis_two" style="color:{{lTextcolor}}">{{listLeftText}}</view>
+      <view  style="color:{{lTextcolor2}}">{{listLeftText2}}</view>
+        <slot name="listLeftText3"></slot>
+    </view>
+    <view class="c-center-l-nw flex-1 ml30 mr30">
+      <view class="ellipsis_two" style="color:{{cTextcolor}}">{{listCenterText}}</view>
+      <view style="color:{{cTextcolor2}}">{{listCenterText2}}</view>
+      <slot name="listCenterText3"></slot>
+    </view>
+    <view class="c-center-r-nw " wx:if="{{!listRighIcon}}">
+      <view style="color:{{rTextcolor}}">{{listRightText}}</view>
+      <view style="color:{{rTextcolor2}}">{{listRightText2}}</view>
+      <slot name="listRightText3"></slot>
+    </view>
+    <view class="iconfont icon-danyou" wx:if="{{listRighIcon}}"></view>
+  </view>
+  <view class="text-right" wx:if="{{listSp}}">共计{{b_textNum}}件商品 合计:<text>¥{{b_money}}</text> </view>
+  <view class="r-center-r-nw mt20" wx:if="{{listSp}}">
+      <view class="list-btn ml20" style="" wx:for="{{btn_list}}">{{item}}</view>
+  </view>
+</view>

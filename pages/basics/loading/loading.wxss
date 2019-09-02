@@ -1,0 +1,3 @@
+page{background:var(--gradualPop) }
+.loading_box{width: 250rpx;height: 150rpx;}
+.ball-clip-rotate-pulse > view{background-color:orange }

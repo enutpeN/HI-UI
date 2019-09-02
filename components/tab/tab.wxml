@@ -1,0 +1,11 @@
+<view class='r-center-l-nw  pd30 mt30 ' style='background-color:#fff' wx:if="{{t_tlite_text}}">
+  <view class='tile-maru mr30'></view>
+  <view>{{t_tlite_text}}</view>
+</view>
+<scroll-view class='you-class' scroll-x="true" style='border-top: 1px solid #f5f5f5;background-color:{{bc_color}}; '>
+  <view class='{{flex_type}}  tab-box '>
+      <view class='{{flex}} tab-center-item {{tab_flex_type}}' bindtap='chooseIndex' data-i="{{index}}" wx:for="{{tab_item}}" style='{{ index==chooseIndex ? "border-bottom: 4rpx solid " + bd_Color : ""}}'>
+          <view  class='{{item.icon}} pr10' style='font-size:{{iconSize}}rpx;color:{{iconColor}};'></view><view style='color:{{textColor}};'>{{item.name}}</view>
+      </view>
+  </view>
+</scroll-view>

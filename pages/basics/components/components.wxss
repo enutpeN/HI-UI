@@ -1,0 +1,19 @@
+page{
+  background:linear-gradient(to right,#159957,#155799);
+  height: 10000rpx;
+}
+.bg{
+  background: rgba(255,255,255,0.4);
+  height: 10000rpx;
+  color: #fff;
+}
+.com-item{
+  width: 300rpx;
+  height: 480rpx;
+  background: #fff;
+  border-radius: 30rpx;
+}
+.com-item-img{
+  width: 300rpx;
+  height: 300rpx;
+}

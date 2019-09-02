@@ -1,0 +1,11 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<find wx:if="{{PageCur=='find'}}" ></find>
+<about wx:if="{{PageCur=='about'}}"></about>  
+<!-- tab -->
+<view class="wh-tab r-center-l-nw" style=' background: {{PageCur=="about"?"var(--gradualWith)":"#fff"}};'>
+  <image class='Half-mochi' style='transition:left 0.5s; left:{{left}}rpx;' src="/image/touyin.png"></image>
+  <view class='c-center-c-nw  tab_item' style='color:{{chooseIndex==index?"var(--blue)":"#999"}}' data-cur="{{item.pagecur}}" data-i="{{index}}" wx:key="wh" wx:for="{{tabList}}" bindtap='tapTab' >
+      <view class='{{item.icon}} {{chooseIndex==index?"animated swing":""}}' style=''></view>
+      <view class='{{chooseIndex==index?"animated swing":""}}'>{{item.text}}</view>
+  </view>
+</view>

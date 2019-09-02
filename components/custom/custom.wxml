@@ -1,0 +1,16 @@
+<view class='position-r' style="height:{{customHeight}}px">
+  <view class="hi-Custom {{bgImage&&bgColor==''?'color-black':'color-white'}} {{bgColor}} you-class" style="height:{{customHeight}}px;padding-top:{{statusBarHeight}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}">
+    <view class="action " bindtap="backPage" wx:if="{{isBack}}">
+      <text class="ml30 mr10 ft30 iconfont icon-fanhui ft38 "></text>
+      <slot name="backText"></slot>
+    </view>
+    <view class="action border-custom" wx:if="{{isCustom}}"  style="width:{{custom.width}}px;height:{{custom.height}}px;margin-left:calc(750rpx - {{custom.right}}px)">
+      <text class="iconfont icon-fanhui ft30" bindtap="backPage"></text>
+      <text class="iconfont icon-zhuye" bindtap="toHome"></text>
+    </view>
+    <view class="content" style="top:{{statusBarHeight}}px">
+      <slot name="content"></slot>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,58 @@
+.Hi-swiper swiper-item{
+  width:690rpx!important;
+  /* height:300rpx; */
+  left: 30rpx;
+  border-radius:30rpx;  
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  
+  /* overflow:initial; */
+
+}
+.san-swiper swiper-item{
+  width:100%!important;
+  /* height:300rpx; */
+  /* left: 30rpx; */
+  box-sizing: border-box; 
+  padding: 0 10rpx; 
+  /* overflow:initial; */
+
+}
+.dots{
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* bottom: 20rpx; */
+  /* top: 20rpx; */
+  display: flex;
+  justify-content: flex-start;
+}
+.dot{
+  /* margin: 0 8rpx;
+  width: 22rpx;
+  height: 10rpx; */
+  background: #fff;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+
+.swiperClass {
+  margin: 0;
+  margin-top: 10px;
+}
+.slide-image {
+  /* width: 100%;
+  height: 90%; */
+  /* border-radius: 10px; */
+  position: relative;
+}
+
+image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}  
+
+image.quiet {
+  transform: scale(0.85);
+  transition: all 0.2s ease-in 0s;
+}
