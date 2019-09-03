@@ -48,6 +48,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 23,
 			"list": [
@@ -216,6 +220,14 @@
 					"id": -1,
 					"name": "轮播图",
 					"pathName": "components/swiper/swiper",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "场景",
+					"pathName": "pages/basics/scene/scene",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,0 +1,8 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-2 ">
+  <view slot="backText">返回</view>
+  <view slot="content" >组件</view>
+</hi-custom>
+<view class="scenePlan" wx:for="{{scenePlan}}">
+  <view class="sceneImg" style="background:url({{item.imgsrc}}) no-repeat center center"></view>
+  <view class="sceneMaks">場景</view>
+</view>

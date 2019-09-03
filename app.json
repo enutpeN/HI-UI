@@ -13,7 +13,8 @@
     "pages/basics/bordershadow/bordershadow",
     "pages/basics/loading/loading",
     "pages/basics/shadow/shadow",
-    "pages/basics/components/components"
+    "pages/basics/components/components",
+    "pages/basics/scene/scene"
   ],
   "window": {
   
