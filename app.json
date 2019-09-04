@@ -14,10 +14,10 @@
     "pages/basics/loading/loading",
     "pages/basics/shadow/shadow",
     "pages/basics/components/components",
-    "pages/basics/scene/scene"
+    "pages/basics/scene/scene",
+    "pages/basics/shoppingCar/shoppingCar"
   ],
   "window": {
-  
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },
