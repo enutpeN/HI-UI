@@ -1,3 +1,5 @@
 .shopIcon{width: 50rpx;height: 50rpx;}
 .calculatorBox{border: 1px solid #ccc;padding: 2rpx 10rpx;} 
-.numbox{border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;padding: 2rpx 10rpx;}
+.numbox{border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;padding: 1rpx 10rpx;width: 50rpx;height: 40rpx;text-align: center;line-height: 40rpx;display: inline-block;}
+.bottomBox{position: fixed;bottom: 0;left: 0;padding-left: 20rpx;height: 100rpx;border-top: 1px solid #ddd;box-sizing: border-box;}
+.submit{border-radius: 80rpx;height: 70rpx;line-height: 70rpx;width: 180rpx;background: linear-gradient(to right, #fbbd08,#f37b1d);text-align: center;color: #fff;}
