@@ -55,7 +55,8 @@ Page({
     },
 
     totalPrice:'0.00',
-    selectAllStatus:false
+    selectAllStatus:false,
+    selecteNum:0
   },
 
   /**
@@ -75,6 +76,7 @@ Page({
   onShow: function () {
 
   },
+  
   //选中商品事件
   selectList(e){
     //点击获取 店铺数组 索引 
@@ -114,6 +116,7 @@ Page({
     //计算总价
     this.totalPrice(shopIndex)
   },
+ 
   //递加计算  
   add(e){
     //点击获取 店铺数组 索引 
@@ -121,14 +124,14 @@ Page({
     //点击获取索引
     const index = e.currentTarget.dataset.index;
     //获取商品列表
-    let list = this.data.shopgood.shop[shopIndex].list
+    let list = this.data.shopgood
     //获取商品此时数量
-    let num = list[index].num
+    let num = list.shop[shopIndex].list[index].num
     //点击递增
     num=num+1
-    list[index].num=num
+    list.shop[shopIndex].list[index].num=num
     //重新渲染数组
-    this.setData({list:list})
+    this.setData({ shopgood:list})
     //计算总价
     this.totalPrice(shopIndex)
   },
@@ -139,9 +142,9 @@ Page({
     //点击获取索引
     const index = e.currentTarget.dataset.index;
     //获取商品列表
-    let list = this.data.shopgood.shop[shopIndex].list
+    let list = this.data.shopgood
     //获取商品此时数量
-    let num = list[index].num
+    let num = list.shop[shopIndex].list[index].num
     //小于等于1 不能再减少了
     if(num<=1){
       wx.showToast({
@@ -152,34 +155,93 @@ Page({
     }
     //点击递减少
     num = num - 1
-    list[index].num = num
+    list.shop[shopIndex].list[index].num = num
     //重新渲染数组
-    this.setData({ list: list })
+    this.setData({ shopgood: list })
     //计算总价
     this.totalPrice(shopIndex)
   },
   
+  //手动修改数量事件
+  uersPutnum(e){
+   
+    //获取用户输入的数量
+    let num = e.detail.value
+    //获取当前店铺数组索引
+    const shopIndex = e.currentTarget.dataset.index0;
+    //获取当前商品数组索引
+    const index = e.currentTarget.dataset.index;
+    //获取商品数组
+    let list =this.data.shopgood
+    //把用户输入的数量赋值给当前商品数组的数量
+    list.shop[shopIndex].list[index].num = num
+    //重新渲染
+    this.setData({ shopgood: list})
+    //计算总价
+    this.totalPrice(shopIndex)
+  },
+
   //计算选中总价
   totalPrice(shopIndex){
     console.log(shopIndex)
     //获取商品列表
-    let list = this.data.shopgood.shop[shopIndex].list
+    let list = this.data.shopgood.shop
     //定义总价变量
     let total=0
-    //循环选中的商品计算求和
+    //定义选中数量
+    let selecteNum=0
+    //循环所有选中的商品计算求和
     for(let i=0;i<list.length;i++){
-      if (list[i].selected){
-          total += list[i].num * list[i].price
-      }
+      for (let j = 0; j < list[i].list.length;j++){
+       if(list[i].list[j].selected){
+         total += list[i].list[j].price * list[i].list[j].num
+         selecteNum += list[i].list[j].num
+       }
+     }
     }
     // 最后赋值到data中渲染到页面
     this.setData({
       list: list,
-      totalPrice: total.toFixed(2)
+      totalPrice: total.toFixed(2),
+      selecteNum: selecteNum
     });
 
   },
-
+  
+  //店铺全选事件
+  shopselectAll(e){
+    //获取此店铺数组的索引
+    const index = e.currentTarget.dataset.index;
+   // 获取商品数据
+    let shopgood = this.data.shopgood
+    //这个店铺的icon全部选择或者取消
+    let shopSelected= shopgood.shop[index].shopSelected
+   
+     //反选
+    shopSelected = !shopSelected
+    shopgood.shop[index].shopSelected = shopSelected
+    //获取需要循环的商品数组
+    let list = shopgood.shop[index].list
+    //循环遍历商品数组里的全部selected[ture] [flase]
+    for (let i = 0; i < list.length;i++){
+      list[i].selected = shopSelected
+    }
+    //默认总数全选
+    this.data.selectAllStatus = true
+    //再循环一轮店铺数组的selected 如果有一个店铺数组的selected不是选择就不是总数全选
+    for (let j = 0; j < shopgood.shop.length;j++){
+      if (!shopgood.shop[j].shopSelected){
+        this.data.selectAllStatus=false
+      }
+    }
+    //重新渲染
+    this.setData({
+      shopgood: shopgood,
+      selectAllStatus:this.data.selectAllStatus
+    })
+    //计算总价
+    this.totalPrice(index)
+  },
   //全选事件
   selectAll(e){
     // 全选ICON默认选中或者取消

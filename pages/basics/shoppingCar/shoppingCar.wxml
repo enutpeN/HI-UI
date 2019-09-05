@@ -1,20 +1,28 @@
+<!-- 自定义导航栏 -->
 <hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
   <view slot="backText">返回</view>
   <view slot="content" >购物车</view>
 </hi-custom>
+
+<!-- 店铺外层 -->
 <view class="pd20" wx:for="{{shopgood.shop}}" wx:for-item="shopItem" wx:for-index="shopIndex">
+ <!-- 店铺标题LOGO等 -->
   <view class="r-center-l-nw ">
-    <view class="iconfont {{shopItem.shopSelected?'icon-yuanxingxuanzhongfill color-f37':'icon-yuanxingweixuanzhong'}}   color-ccc mr20 "></view>
-    <!-- <view></view> -->
+    <view catchtap="shopselectAll" data-index="{{shopIndex}}" class="iconfont {{shopItem.shopSelected?'icon-yuanxingxuanzhongfill color-f37':'icon-yuanxingweixuanzhong'}}   color-ccc mr20 "></view>
     <image class="shopIcon" src="{{shopItem.shopImg}}"></image>
     <view class="ml20">{{shopItem.shopName}}</view>
     <view class="iconfont icon-danyou ft36"></view>
   </view>
+
+  <!-- 商品信息盒子 -->
   <view class="r-center-l-nw mt10" wx:for="{{shopItem.list}}" wx:for-item="item">
+   <!-- 商品选择框 -->
     <view class="c-center-c-nw" style="height:150rpx;" catchtap="selectList" data-index0="{{shopIndex}}" data-index="{{index}}">
      <view  class="iconfont {{item.selected?'icon-yuanxingxuanzhongfill color-f37':' icon-yuanxingweixuanzhong'}}  color-ccc mr20  "></view>
     </view>
+   <!-- 商品图片 -->
     <image style="width:150rpx;height:150rpx;border-radius:5rpx;" src="{{item.image}}"></image>
+   <!-- 商品信息盒（名称-价格-规格-数量） -->
     <view class="ml20 c-center-l-nw flex-1">
       <view> {{item.title}}</view>
       <view>规格：{{item.pro_name}}</view>
@@ -22,13 +30,15 @@
         <view class="color-f37"> ￥{{item.price}}</view>
         <view  class="r-center-b-nw ">
           <view class="calculatorBox" data-index0="{{shopIndex}}"  data-index="{{index}}"  catchtap="minus">-</view>
-          <input class="numbox" value="{{item.num}}"></input>
+          <input data-index0="{{shopIndex}}"   data-index="{{index}}" bindinput="uersPutnum" class="numbox" value="{{item.num}}"></input>
           <view class="calculatorBox"  data-index0="{{shopIndex}}" data-index="{{index}}" catchtap="add">+</view>
         </view>
       </view>
     </view>
   </view>
 </view>
+
+<!-- 底部全选结账菜单栏 -->
 <view class="r-center-b-nw bottomBox w-100" catchtap="selectAll">
   <view class="r-center-l-nw">
     <view class="iconfont {{selectAllStatus?'icon-yuanxingxuanzhongfill color-f37':'icon-yuanxingweixuanzhong'}}   color-ccc mr20 "></view>
@@ -36,6 +46,6 @@
   </view> 
   <view class="r-center-l-nw">
     <view class="mr10">合计:<text>￥{{totalPrice}}</text></view>
-    <view class="submit">结算（0）</view>
+    <view class="submit">结算（{{selecteNum}}）</view>
   </view>
 </view>
