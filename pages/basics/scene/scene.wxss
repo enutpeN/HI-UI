@@ -24,7 +24,7 @@
 .sceneMaks{position: absolute;
   height: 80rpx;
   width: 300rpx;
-  background: linear-gradient(to right, rgba(0,0, 0, 1) 0%,rgba(231,51, 104, 0) 100% );
+  background: linear-gradient(to right, rgba(0,0, 0, 1) 0%,rgba(0, 0, 0, 0) 100% );
   bottom: 0;left: 0;
   border-radius: 0 0rpx 0rpx 10rpx; 
   color: #fff;

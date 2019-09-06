@@ -77,7 +77,6 @@ Component({
     chan2(e){
       console.log(this.currentX)
       let minCurrentX=''
-      let moveX=''
       switch (this.data.idefault) {
         case '1':
           minCurrentX=35

@@ -2,7 +2,7 @@
   <view slot="backText">返回</view>
   <view slot="content" >组件</view>
 </hi-custom>
-<view class="scenePlan" wx:for="{{scenePlan}}">
+<view class="scenePlan" wx:for="{{scenePlan}}" catchtap="jump" data-i="{{index}}">
   <view class="sceneImg" style="background:url({{item.imgsrc}}) no-repeat center center"></view>
   <view class="sceneMaks">{{item.text}}</view>
 </view>

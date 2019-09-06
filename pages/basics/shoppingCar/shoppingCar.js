@@ -1,9 +1,5 @@
-// pages/component/shoppingCar/shoppingCar.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+ 
   data: {
     shopgood:{
       shop:[{
@@ -11,64 +7,67 @@ Page({
         shopImg:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4210154917,2881117455&fm=26&gp=0.jpg',
         shopName:'天猫旗舰店',
         list:[ {
+          x:0,
           id: 1,
-          title: 'ameirg香辣鸡翅汉堡 德国配方来自欧洲的味道',
-          image: 'http://img4.imgtn.bdimg.com/it/u=1322201793,35923405&fm=26&gp=0.jpg',
+          title: 'ameirg香辣鸡翅汉堡 德国配方',
+          image: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3581056344,369951520&fm=26&gp=0.jpg',
           pro_name: "600g",
           num: 1,
-          price: 180,
-          selected: false
+          price: 100,
+          selected: false,
+          opacity: 1
         },
-          {
+          { 
+            x: 0,
             id: 1,
-            title: 'ameirg香辣鸡翅汉堡 德国配方来自欧洲的味道',
-            image: 'http://img4.imgtn.bdimg.com/it/u=1322201793,35923405&fm=26&gp=0.jpg',
-            pro_name: "600g",
+            title: '马达京nimoa口味 薯条',
+            image: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1667823278,1303971819&fm=26&gp=0.jpg',
+            pro_name: "100g",
             num: 1,
-            price: 180,
-            selected: false
+            price: 50,
+            selected: false,
+            opacity: 1
           }],
       }, {
           shopSelected: false,
-          shopImg: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4210154917,2881117455&fm=26&gp=0.jpg',
-          shopName: '天猫旗舰店',
+          shopImg: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1980809789,1223150637&fm=26&gp=0.jpg',
+          shopName: '小小猫店',
           list: [{
+            x: 0,
             id: 1,
-            title: 'ameirg香辣鸡翅汉堡 德国配方来自欧洲的味道',
-            image: 'http://img4.imgtn.bdimg.com/it/u=1322201793,35923405&fm=26&gp=0.jpg',
-            pro_name: "600g",
+            title: '站立猫猫',
+            image: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2091257262,1175391247&fm=26&gp=0.jpg',
+            pro_name: "1只",
             num: 1,
-            price: 180,
-            selected: false
+            price: 200,
+            selected: false,
+            opacity:1
           },
-          {
+          { 
+            x: 0,
             id: 1,
-            title: 'ameirg香辣鸡翅汉堡 德国配方来自欧洲的味道',
-            image: 'http://img4.imgtn.bdimg.com/it/u=1322201793,35923405&fm=26&gp=0.jpg',
-            pro_name: "600g",
+            title: '加菲猫 小绒毛型 一岁脱奶',
+            image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3130630636,1225999299&fm=26&gp=0.jpg',
+            pro_name: "1只 深橘色",
             num: 1,
-            price: 180,
-            selected: false
+            price: 3500,
+            selected: false,
+            opacity: 1
           }],
         }],
       
     },
-
+    currentX: 0,
     totalPrice:'0.00',
     selectAllStatus:false,
-    selecteNum:0
+    selecteNum:0,
+    noData:false
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },
@@ -166,7 +165,7 @@ Page({
   uersPutnum(e){
    
     //获取用户输入的数量
-    let num = e.detail.value
+    let num = Number.parseInt(e.detail.value)
     //获取当前店铺数组索引
     const shopIndex = e.currentTarget.dataset.index0;
     //获取当前商品数组索引
@@ -268,18 +267,91 @@ Page({
     this.totalPrice();
   },
 
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  //左滑过程
+  moved(e){
+    //获取左滑距离
+    this.currentX = e.detail.x;
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //左滑动作停止事件
+  moveEnd(e){
+    console.log(this.currentX)
+    //获取当前店铺索引
+    let shopIndex=e.currentTarget.dataset.index0
+    //获取当前商品索引
+    let index = e.currentTarget.dataset.index
+    //获取当前店铺数组
+    let list=this.data.shopgood
+    
+    //建立最小回弹距离变量
+    let minCurrentX = ''
+    minCurrentX = 30
+    //判断左滑距离是否大于最小回弹距离
+    if (this.currentX < -minCurrentX) {
+      //大于就完成左滑 全部漏出当前商品盒子出影藏滑块
+      this.x = -(minCurrentX * 2);
+      //设置当前商品盒子的影藏
+      list.shop[shopIndex].list[index].x = this.x
+      //重新渲染
+      this.setData({
+        shopgood: list
+      });
+    } else {
+      //小于就回当前商品盒子弹影藏滑块
+      // this.x = 0;
+      //设置当前商品盒子的影藏
+      list.shop[shopIndex].list[index].x = 0
+        //重新渲染
+      this.setData({
+        shopgood: list
+      });
+    }
+  },
+  
+  //点击删除按钮事件
+  tapDelete(e){
+   
+    //获取当前店铺索引
+    let shopIndex = e.currentTarget.dataset.index0
+    //获取当前商品索引
+    let index = e.currentTarget.dataset.index
+    //获取当前店铺数组
+    let list = this.data.shopgood
+    //删除当前商品数组下的此项(1透明度变为0 2左滑位移问题 3选择取消好计算价格)
+    // list.shop[shopIndex].list.splice(index,1)
+    list.shop[shopIndex].list[index].opacity=0
+    list.shop[shopIndex].list[index].x = 0
+    list.shop[shopIndex].list[index].selected=false
+    
+   
+    
+    //重新赋值
+    this.setData({ shopgood: list, })
+    // 计算金额方法
+    this.totalPrice(shopIndex);
+    //动画效果 延迟0.55秒删除数组的该项 重新渲染
+    setTimeout(()=>{
+      list.shop[shopIndex].list.splice(index, 1)
+      //如果此店铺下没有任何商品了 此商铺数组也删除
+      console.log(list.shop[shopIndex].list.length)
+      if (list.shop[shopIndex].list.length<=0){
+        list.shop.splice(shopIndex,1)
+      }
+      //判断是否全部删除 关闭全选
+      let selectAllStatus= this.data.selectAllStatus 
+      let cont=0
+      for (let i = 0; i < list.shop.length; i++) {
+      
+          cont+= list.shop[i].list.length
+      
+      }
+      console.log(cont)
+      if(cont<=0){
+        selectAllStatus=false
+        this.data.noData=true
+      }
+      this.setData({ shopgood: list, selectAllStatus: selectAllStatus, noData: this.data.noData})
+    },550)
+     
   }
+  
 })

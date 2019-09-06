@@ -55,7 +55,7 @@ Component({
           break
         case 2:
           wx.navigateTo({
-            url: '/pages/basics/element/element',
+            url: '/pages/basics/scene/scene',
           })
           break
       }
