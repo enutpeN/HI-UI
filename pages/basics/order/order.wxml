@@ -1,0 +1,14 @@
+<!-- 自定义导航栏 -->
+<hi-custom isBack="{{true}}" bgColor="bg-top-5">
+  <view slot="backText">返回</view>
+  <view slot="content" >购物车</view>
+</hi-custom>
+<!-- 商家标题 -->
+<view class="r-center-l-nw pd20" style="background:#333">
+  <image  src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1876485134,1679539841&fm=15&gp=0.jpg" style="width:150rpx;height:150rpx;border-radius:10rpx;"></image>
+  <view class="c-center-b-nw ml20" style="color:#fff;">
+    <view>配送约30分钟|准时宝|放心吃</view>
+    <view>公告：温馨提示:亲亲感谢...//</view>
+    <view></view>
+  </view>
+</view>

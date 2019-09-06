@@ -15,7 +15,8 @@
     "pages/basics/shadow/shadow",
     "pages/basics/components/components",
     "pages/basics/scene/scene",
-    "pages/basics/shoppingCar/shoppingCar"
+    "pages/basics/shoppingCar/shoppingCar",
+    "pages/basics/order/order"
   ],
   "window": {
     "navigationStyle": "custom",

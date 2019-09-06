@@ -65,6 +65,7 @@ page{
   --goreBule:linear-gradient(to right,#159957,#155799);
    --goreGrey:linear-gradient(to right,#bdc3c7,#2c3e50);
    --goreYellow:linear-gradient(to right,#CAC531,#F3F9A7);
+    --gradualBlack:linear-gradient(to right,#333,#434343);
   /* --gradualBlue:linear-gradient(to right,#12c2e9,#c471ed,#f64f59);
   --gradualBlue:linear-gradient(to right,#ee9ca7,#ffdde1);
   --gradualBlue:linear-gradient(to right,#C6FFDD,#FBD786,#f7797d);
@@ -107,6 +108,10 @@ page{
 }
 .bg-top-4 {
 	background-image: var(--gradualBlue1);
+	color: var(--white);
+}
+.bg-top-5{
+  background-image: var(--gradualBlack);
 	color: var(--white);
 }
 

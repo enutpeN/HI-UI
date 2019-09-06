@@ -1,4 +1,4 @@
-<view class="{{listWidth!='100%'?'ml30':''}} you-class" style="{{border_b?'border-bottom:1px solid' + bor_bColor:''}};padding:{{listPaddingTb}}rpx {{listPaddingLr}}rpx;border-radius:{{listRadius}};background-color:{{bgColor}};width:{{listWidth}};box-sizing: border-box;">
+<view class="{{listWidth!='100%'?'ml30':''}} you-class" style="{{border_b?'border-bottom:1px solid' + bor_bColor:''}};padding:{{listPaddingTb}}rpx {{listPaddingLr}}rpx;border-radius:{{listRadius}};background-color:{{bgColor}};width:{{listWidth}};box-sizing: border-box; color:#fff;">
   <view class="r-center-l-nw" wx:if="{{listSp}}">
     <view class="flex-1 r-center-l-nw">
       <!-- <view class="iconfont icon-taobao" ></view> -->

@@ -27,7 +27,7 @@ Component({
     },
     listRadius: {//列表圆角
       type: String,
-      value: '10rpx'
+      value: '0'
     },
     listSp: {//商品详细列表模式
       type: [Boolean, String],
@@ -91,7 +91,7 @@ Component({
     },
     lTextcolor:{//左第一行文字颜色
       type: String,
-      value: '#333'
+      value: '#fff'
     },
     lTextcolor2: {//左第二行文字颜色
       type: String,
