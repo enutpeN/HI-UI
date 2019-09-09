@@ -5,61 +5,67 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    mnewList:['菜单','评价','商家'],
+    scrolLeft:[
+      { 'iocn': '', 'name': '热销' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '折扣' },
+      { 'iocn': '', 'name': '热销' },
+      { 'iocn': '', 'name': '热销' },
+      { 'iocn': '', 'name': '热销' },
+    ],
+    scrolRight:[
+      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6,'moPirce':29.1 },
+      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      { 'name': '下饭口水鸭2', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+    ],
+    choseIndex:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  //切换菜单栏
+  choseMnew(e){
+    //获取菜单栏索引 
+    let choseIndex = e.currentTarget.dataset.i
+    this.setData({ choseIndex, currentIndex: choseIndex})
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  //选项卡内容切换事件
+  pagechange(e){
+    console.log(e)
+    //获取轮播图当前索引
+    let currentPageIndex = e.detail.current
+    this.setData({ choseIndex: currentPageIndex, currentIndex: currentPageIndex, })
   },
+ 
+  
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  
+  
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
+  
   onReachBottom: function () {
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
+  
   onShareAppMessage: function () {
 
   }

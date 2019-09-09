@@ -6,9 +6,67 @@
 <!-- 商家标题 -->
 <view class="r-center-l-nw pd20" style="background:#333">
   <image  src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1876485134,1679539841&fm=15&gp=0.jpg" style="width:150rpx;height:150rpx;border-radius:10rpx;"></image>
-  <view class="c-center-b-nw ml20" style="color:#fff;">
-    <view>配送约30分钟|准时宝|放心吃</view>
-    <view>公告：温馨提示:亲亲感谢...//</view>
-    <view></view>
+  <view class="c-center-b-nw ml20" style="color:#fff;height:150rpx;width:425rpx;">
+    <view class="mt20 ft24 ellipsis_one">配送约30分钟|准时宝|放心吃</view>
+    <view class="ft24 ellipsis_one">公告：温馨提示:亲亲感谢，本店产品绝对绿色安全用户可以尽可放心...//</view>
+    <view> <view class="orderIcon mr10">20减11</view> <view class="orderIcon mr10">50减21</view> <view class="orderIcon">100减35</view>  </view>
   </view>
+  <view class="onBtn ml20">关注</view>
 </view>
+<!-- 选项卡top -->
+<view>
+  <scroll-view>
+    <view class="r-center-b-nw pl50" style="height:75rpx;box-shadow:border-box;border-bottom:1px solid #f5f5f5;">
+    <view class="r-center-l-nw " style="height:75rpx;">
+      <view class="c-center-a-nw h-100 mr60" wx:for="{{mnewList}}" data-i="{{index}}" catchtap="choseMnew">
+        <view class="{{index==choseIndex?'bold':''}} ft30" >{{item}}</view>
+        <view  class="order-line" style="{{index==choseIndex?'background: #f4c74a;':'background: #fff;'}}"></view>
+      </view>
+    </view>
+    <view class="search r-center-l-nw mr20">
+      <view class="iconfont icon-sousuo ft22 mr10 bold" style="color:#666"></view>
+      <view>搜索</view>
+    </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 选项卡内容 -->
+<swiper current='{{currentIndex}}' bindchange='pagechange' style="height:calc(100% - 374rpx)">
+  <!-- 菜单页签 -->
+  <swiper-item>
+    <!-- 菜单页签左 scroll-->
+    <scroll-view class="scroll-left h-100" scroll-y="{{true}}">
+      <view class="r-center-l-nw "  style="height:80rpx;" wx:for="{{scrolLeft}}">
+        <view class="scroll-left-line ml20"></view>
+        <view class=""></view>
+        <view>{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <!-- 菜单页签右 scroll -->
+    <view class="scroll-right h-100 position-r pb70">
+      <view class="r-center-l-nw tlite">热销</view>
+     <scroll-view class="h-100" scroll-y="{{true}}">
+          <view class="r-center-l-nw {{index==0?'mt70':''}} pl20" style="height:200rpx;" wx:for="{{scrolRight}}">
+            <image style="width:150rpx;height:150rpx;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1061021597,2183335415&fm=26&gp=0.jpg"></image>
+            <view class="ml15 c-center-l-nw rightconts h-100 flex-1" >
+              <view  class="ft28 bold mb5">{{item.name}}</view> 
+              <view class="ft24 mb5">{{item.sku}}</view>
+              <view  class="ft24">月销:{{item.mothbur}}</view>
+              <view class="r-center-b-nw" style="width:395rpx">
+                <view>  <text class="ft30 bold color-ff0">￥{{item.pirce}}</text> <text class="ft24" style="text-decoration:line-through">￥{{item.moPirce}}</text> </view>
+                <view class="addBtn bold ft44">+</view>
+              </view>
+            </view>
+          </view>
+    </scroll-view>
+    </view>
+  </swiper-item>
+ 
+ 
+  <swiper-item>
+    <view>评价</view>
+  </swiper-item>
+  <swiper-item>
+    <view>商家</view>
+  </swiper-item>
+</swiper>
