@@ -3,12 +3,12 @@
 /* 图标 */
 @font-face {
   font-family: 'iconfont';  /* project id 1189658 */
-  src: url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.eot');
-  src: url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1189658_zmhy6tfqndk.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.eot');
+  src: url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1189658_wnkrxmyqg2m.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -308,6 +308,10 @@ image {
 .bg-mask cover-view {
 	z-index: 5;
 	position: relative;
+}
+/* 盒子计算 */
+.box-border{
+  box-sizing: border-box;
 }
 /* 定位 */
 .position-r{
@@ -631,7 +635,27 @@ image {
 .icon-yuanxingxuanzhong:before {
   content: "\e731";
 }
-
+.icon-shijian:before {
+  content: "\e75e";
+}
+.icon-anquan:before {
+  content: "\e61b";
+}
+.icon-weizhi:before {
+  content: "\e619";
+}
+.icon-dianhua:before {
+  content: "\e61a";
+}
+.icon-zhekou:before {
+  content: "\e70b";
+}
+.icon-rexiao2:before {
+  content: "\e6c8";
+}
+.icon-file-text:before {
+  content: "\e670";
+}
 /* 宽度百分比 */
 .w-10{width: 10%}.w-20{width: 20%}.w-25{width: 25%}.w-30{width: 30%}.w-40{width: 40%}.w-50{width: 50%}.w-60{width: 60%}.w-70{width: 70%}.w-80{width: 80%}.w-90{width: 90%}.w-100{width: 100%}
 /* 高度百分比 */

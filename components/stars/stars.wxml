@@ -1,7 +1,7 @@
 <view class="r-center-c-nw ">
-    <view class="color-39b " wx:for="{{starsList}}" wx:key="{{index}}" >
-    <view wx:if="{{passScore>=starsScore}}" class="iconfont icon-starfull ft30"></view>
-    <view wx:elif="{{passScore===starsScore}}"class="iconfont icon-starhalf ft30"></view>
-    <view wx:else="{{passScore<starsScore}}"class="iconfont icon-starempty ft30"></view>
+    <view wx:for="{{starsList}}" wx:key="{{index}}"  style="color:{{iconColor}}">
+    <view wx:if="{{passScore>=starsScore}}" class="iconfont icon-starfull" style="font-size:{{iconSize}}rpx;"></view>
+    <view wx:elif="{{passScore===starsScore}}"class="iconfont icon-starhalf "></view>
+    <view wx:else="{{passScore<starsScore}}"class="iconfont icon-starempty "></view>
     </view>
 </view>

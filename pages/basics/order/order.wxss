@@ -1,10 +1,15 @@
-page{height: 100%;}
+page{height: 100%; }
+.tag{padding: 10rpx 15rpx;border:1px solid #cfcfcf;text-align: center;}
+.mtIcon{padding: 5rpx 10rpx;border-radius: 10rpx 0 10rpx 0;background:#f4c74a; display: inline-block;}
 .orderIcon{padding: 3rpx 5rpx;background: #e36a59;color: #fff;display: inline-flex;font-size: 24rpx;}
 .onBtn{padding: 5rpx 15rpx;background: #f4c74a;border-radius: 10rpx;}
 .order-line{height: 5rpx;width: 100%;}
 .search{padding: 5rpx 15rpx;background: #eee;color: #666;border-radius: 40rpx;}
 .scroll-left{width: 160rpx;background: #f8f8f8;display: inline-block;}
 .scroll-right{width: 590rpx;display: inline-block;}
-.scroll-left-line{height: 15rpx;background: #f4c74a;width:6rpx;margin-right: 10rpx}
+.scroll-left-line{height: 15rpx;width:6rpx;margin-right: 10rpx}
+.fen-line{height: 22rpx;width: 750rpx;background: #f3f3f3;}
+.shu-line{height: 100rpx;width: 1px;background: #f3f3f3;}
 .tlite{height: 70rpx;background: #fff;position: absolute;top: 0;padding-left: 20rpx;z-index: 100;width: 100%;}
+.smTlite{height: 70rpx;background: #fff;padding-left: 20rpx;width: 100%;line-height: 70rpx;}
 .addBtn{width: 50rpx;height: 50rpx;border-radius: 100rpx;background: #f4c74a;text-align: center;line-height: 50rpx;}

@@ -1,0 +1,8 @@
+<swiper style="height:clac(100% - 160rpx;)" >
+  <swiper-item>
+    <scroll-view style="height:100%;display:inline-block" scroll-y="{{true}}"  scroll-into-view="{{toView}}"  scroll-with-animation>
+      <view class="r-center-c-nw" wx:for="{{list}}" id="{{ke}}{{index}}" style="background:{{item}};width:300prx;height:160rpx;">{{index}}</view>
+    </scroll-view>
+<button catchtap="tapthis" style="position:fixed;top:0;left:0">点击</button>
+  </swiper-item>
+</swiper>

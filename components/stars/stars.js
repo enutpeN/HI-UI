@@ -16,6 +16,14 @@ Component({
       type: Number,
       value: 6
     },
+    iconSize: {
+      type: Number,
+      value: 30
+    },
+    iconColor:{
+      type: String,
+      value: '#39b54a'
+    },
   },
 
   /**

@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "list": "/components/list/list"
+    "stars": "/components/stars/stars"
   }
 }
