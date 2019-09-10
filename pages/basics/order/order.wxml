@@ -134,13 +134,21 @@
       <view class="">配送服务：<view class="mtIcon">美团专送</view> 提供高品质送餐服务</view>
     </view>
     <view class="pd25 box-border r-center-l-nw ">
-      <view class="iconfont icon-shijian  mr20"></view>
+      <view class="iconfont icon-shijian ft40 mr20"></view>
       <view>配送时间:9.30-21:00</view>
     </view>
      <view class="fen-line"></view>
-     <view class="pd25 box-border r-center-l-nw ">
-      <view class="iconfont icon-yuanxingxuanzhong  mr20"></view>
+     <view class="pd25 box-border r-center-l-nw border-b--gray">
+      <view class="iconfont icon-yuanxingxuanzhong ft40  mr20"></view>
       <view>商家服务:到店自取（享优惠）</view>
     </view>
+    <scroll-view scroll-y="{{true}}">
+      <view class="pd25 box-border" >
+        <view class="mb20 r-center-l-nw " wx:for="{{shopActive}}">
+          <view class="cIcon mr20" style="background: #ea5048;">{{item.name}}</view>
+          <view class="ft26">{{item.text}}</view>
+        </view>
+      </view>
+    </scroll-view>
   </swiper-item>
 </swiper>
