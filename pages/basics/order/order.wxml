@@ -46,9 +46,9 @@
       <view class="scroll-right h-100 position-r pb70" >
         <view class="r-center-l-nw tlite">{{nowtitle}}</view>
       <scroll-view class="h-100" bindscroll="scrollEvent" scroll-y="{{true}}" scroll-into-view="{{toView}}" scroll-with-animation scroll-anchoring	>
-            <view class="myRight {{index==scrolLeft.length-1?'pb110 pb-'+scrolRight.length+'':''}}"  wx:for="{{scrolLeft}}">
-              <view class="smTlite" id="right{{index}}">{{item.name}}{{index}}</view>
-              <view class="r-center-l-nw {{index==0?'':''}} pl20"  style="height:200rpx;" wx:for="{{scrolRight}}">
+            <view class="myRight {{index==scrolLeft.length-1?'pb110 pb-'+scrolLeft[index].scrolRight.length+'':''}}"  wx:for-item="itemL"  wx:for="{{scrolLeft}}">
+              <view class="smTlite" id="right{{index}}">{{itemL.name}}{{index}}</view>
+              <view class="r-center-l-nw {{index==0?'':''}} pl20"  style="height:200rpx;" wx:for="{{itemL.scrolRight}}">
                 <image style="width:150rpx;height:150rpx;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1061021597,2183335415&fm=26&gp=0.jpg"></image>
                 <view class="ml15 c-center-l-nw rightconts h-100 flex-1" >
                   <view  class="ft28 bold mb5">{{item.name}}{{index}}</view> 
@@ -155,6 +155,7 @@
 <view class="footNav " wx:if="{{currentIndex==0}}">
   <view class="position-r">
       <image src="/image/wmxg.png" class="wmIcon"></image>
+      <view class="numbIcon" >2</view>
   </view>
   <view class="foot-left f26" >另需要配送费￥2.5 | 支持自取</view>
   <view class="foot-right bold ft32">20元起送</view>

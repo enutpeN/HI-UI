@@ -8,19 +8,60 @@ Page({
   data: {
     mnewList:['菜单','评价','商家'],
     scrolLeft:[
-      { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销' },
-      { 'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣' },
-      { 'icon': '', 'name': '小菜下饭' },
-      { 'icon': '', 'name': '大吉大利' },
-      { 'icon': '', 'name': '特价饮料' },
-      { 'icon': '', 'name': '大鱼大肉' },
-      { 'icon': '', 'name': '精选汤汁' },
-      { 'icon': '', 'name': '单加米饭' },
-      { 'icon': '', 'name': '精选汤汁' },
+      { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销',
+        scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          
+          ]
+       },
+      { 'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣' ,
+        scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ]
+      },
+      {
+        'icon': '', 'name': '小菜下饭', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ] },
+      {
+        'icon': '', 'name': '大吉大利', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ]},
+      {
+        'icon': '', 'name': '特价饮料', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ] },
+      {
+        'icon': '', 'name': '大鱼大肉', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ] },
+      {
+        'icon': '', 'name': '精选汤汁', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ] },
+      {
+        'icon': '', 'name': '单加米饭', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ] },
+      {
+        'icon': '', 'name': '精选汤汁', scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+
+        ]},
  
     ],
     scrolRight:[
-      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6,'moPirce':29.1 },
+    
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
