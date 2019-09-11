@@ -8,19 +8,21 @@ Page({
   data: {
     mnewList:['菜单','评价','商家'],
     scrolLeft:[
-      { 'iocn': '', 'name': '热销' },
-      { 'iocn': '', 'name': '折扣' },
-      { 'iocn': '', 'name': '小菜下饭' },
-      { 'iocn': '', 'name': '大吉大利' },
-      { 'iocn': '', 'name': '特价饮料' },
-      { 'iocn': '', 'name': '大鱼大肉' },
-      { 'iocn': '', 'name': '精选汤汁' },
-      { 'iocn': '', 'name': '单加米饭' },
+      { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销' },
+      { 'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣' },
+      { 'icon': '', 'name': '小菜下饭' },
+      { 'icon': '', 'name': '大吉大利' },
+      { 'icon': '', 'name': '特价饮料' },
+      { 'icon': '', 'name': '大鱼大肉' },
+      { 'icon': '', 'name': '精选汤汁' },
+      { 'icon': '', 'name': '单加米饭' },
+      { 'icon': '', 'name': '精选汤汁' },
+ 
     ],
     scrolRight:[
       { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6,'moPirce':29.1 },
-      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
-      { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+      // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
       // { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
@@ -51,6 +53,7 @@ Page({
       { 'name': '减', 'text': '满20减11；满50减24；满100减32（在线支付专享）' },
       { 'name': '减', 'text': '满20减11；满50减24；满100减32（在线支付专享）' },
     ],
+    currentIndex:0,
     choseIndex:0,
     leftChose:0,
     heightArr :[],
@@ -120,7 +123,8 @@ Page({
         let nowtitle = this.data.scrolLeft[newleftChose].name
         console.log(nowtitle)
         this.setData({
-          leftChose: newleftChose, nowtitle
+          leftChose: newleftChose, nowtitle,
+          toViewl: 'left' + newleftChose
         })
       }
     }else{
@@ -131,7 +135,8 @@ Page({
         console.log(newleftChose)
         console.log(nowtitle)
         this.setData({
-          leftChose: leftChose - 1, nowtitle
+          leftChose: leftChose - 1, nowtitle,
+          toViewl: 'left' + newleftChose
         })
       }
     }
