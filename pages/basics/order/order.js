@@ -8,54 +8,55 @@ Page({
   data: {
     mnewList:['菜单','评价','商家'],
     scrolLeft:[
-      { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销',
+      { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销','num':0,
         scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
           
           ]
        },
-      { 'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣' ,
+      {
+        'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣', 'num': 0,
         scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ]
       },
       {
-        'icon': '', 'name': '小菜下饭', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '小菜下饭', 'num': 0, scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
-        'icon': '', 'name': '大吉大利', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '大吉大利', 'num': 0, scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ]},
       {
-        'icon': '', 'name': '特价饮料', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '特价饮料', 'num': 0,scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
-        'icon': '', 'name': '大鱼大肉', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '大鱼大肉', 'num': 0,scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
-        'icon': '', 'name': '精选汤汁', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '精选汤汁', 'num': 0,scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
-        'icon': '', 'name': '单加米饭', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '单加米饭', 'num': 0, scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
-        'icon': '', 'name': '精选汤汁', scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1 },
+        'icon': '', 'name': '精选汤汁', 'num': 0, scrolRight: [
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ]},
  
@@ -94,11 +95,16 @@ Page({
       { 'name': '减', 'text': '满20减11；满50减24；满100减32（在线支付专享）' },
       { 'name': '减', 'text': '满20减11；满50减24；满100减32（在线支付专享）' },
     ],
+    catList:[],
     currentIndex:0,
     choseIndex:0,
     leftChose:0,
     heightArr :[],
-    nowtitle:'热销'
+    nowtitle:'热销',
+    totalPrice:0,
+    totalNum:0,
+    anim:'',
+    startPirec:20
   },
 
   onLoad: function (options) {
@@ -112,6 +118,7 @@ Page({
   choseMnew(e){
     //获取菜单栏索引 
     let choseIndex = e.currentTarget.dataset.i
+    //重新渲染
     this.setData({ choseIndex, currentIndex: choseIndex})
   },
   //选项卡内容切换事件
@@ -119,6 +126,7 @@ Page({
     console.log(e)
     //获取轮播图当前索引
     let currentPageIndex = e.detail.current
+    //重新渲染
     this.setData({ choseIndex: currentPageIndex, currentIndex: currentPageIndex, })
   },
  
@@ -126,28 +134,29 @@ Page({
   tapLeft(e){
     //获取菜单栏索引 
     let leftChose = e.currentTarget.dataset.i
+    //设置标题栏
     let nowtitle = this.data.scrolLeft[leftChose].name
+    //重新渲染
     this.setData({ leftChose, toView: 'right' + leftChose, nowtitle})
   },
   //获取右侧分类盒子内高度之和
   selectHeight(e){
+     //定义高度变量
     let that=this
     let h = 0
+    //定义右边分类盒子总高度数组
     that.data.heightArr =[]
+    //获取Dom实例
     const query = wx.createSelectorQuery();
-    console.log(query)
+    //找到所有类名位myRight的元素素组
     query.selectAll('.myRight').boundingClientRect()
-    
+    //获取每个类名为myRight的DOM高度 累加
     query.exec(function (res) {
       res[0].forEach((item) => {
         h += item.height;
+        //添加到总高度数组
         that.data.heightArr.push(h);
       })
-      console.log(that.data.heightArr);
-      // [160, 320, 1140, 1300, 1570, 1840, 2000]
-      // 1270：热销标题高度70rpx，item的高度110，洗车有6个item，所以70+200*6=1270rpx;
-      // 320: 汽车美容标题高度50px，只有一个item，再加上洗车的高度，所以50+110*1+160=320px;
-      // ...
     })
   },
   //右侧滚动事件
@@ -185,8 +194,75 @@ Page({
     this.distance = scrollTop;
   },
   
+  //点击加号
+  add(e){
+    //获取分类数组的索引 和当前商品所在数组索引
+    let index0=e.currentTarget.dataset.iz
+    let index = e.currentTarget.dataset.i
+    //获取分类数组
+    let scrolLeft = this.data.scrolLeft
+    //把增加的商品加入到一个新的数组中 放入购物车内
+    let newArr=this.data.catList
+    let mu =  scrolLeft[index0].scrolRight[index]
+    newArr.push(mu)
+     //定义分类数组的总数和所有商品的总数
+    let num = scrolLeft[index0].scrolRight[index].num
+    let num0 = scrolLeft[index0].num
+    num0 = num0 + 1
+    num= num + 1
+    scrolLeft[index0].num = num0
+    scrolLeft[index0].scrolRight[index].num = num
+    //重新渲染 和抖动外卖小哥
+    this.setData({ scrolLeft: scrolLeft, anim: 'swing', catList: newArr})
+    setTimeout(()=>{
+      this.setData({ anim: '' })
+    },500)
+    //计算总价格和总数量
+    this.getTotalPrice()
+  },
   
-
+  //点击减号事件
+  minus(e) {
+    //获取分类数组的索引 和当前商品所在数组索引
+    let index0 = e.currentTarget.dataset.iz
+    let index = e.currentTarget.dataset.i
+    //获取分类数组
+    let scrolLeft = this.data.scrolLeft
+    //把增加的商品加入到一个新的数组中 放入购物车内
+    let newArr = this.data.catList
+    newArr[index].num = newArr[index].num-1
+    if (newArr[index].num==0){
+      newArr.splice(index,1)
+    }
+    //定义分类数组的总数和所有商品的总数
+    let num = scrolLeft[index0].scrolRight[index].num
+    let num0 = scrolLeft[index0].num
+    num0 = num0 - 1 
+    num = num -1
+    scrolLeft[index0].num = num0
+    scrolLeft[index0].scrolRight[index].num = num
+    //重新渲染
+    this.setData({ scrolLeft: scrolLeft, catList:newArr })
+    //计算总价格和总数量
+    this.getTotalPrice()
+  },
+  //计算总价格
+  getTotalPrice(e){
+    //获取分类数组的索引 和当前商品所在数组索引
+    // let index0 = e.currentTarget.dataset.iz
+    // let index = e.currentTarget.dataset.i
+    let totalPrice=0
+    let totalNum=0
+    //获取分类数组
+    let scrolLeft = this.data.scrolLeft
+    for (let i = 0; i < scrolLeft.length;i++){
+      for (let j = 0; j < scrolLeft[i].scrolRight.length;j++){
+        totalPrice += scrolLeft[i].scrolRight[j].num * scrolLeft[i].scrolRight[j].pirce
+        totalNum += scrolLeft[i].scrolRight[j].num
+      }
+    }
+    this.setData({ totalPrice: totalPrice.toFixed(2), totalNum})
+  },
   
   onReachBottom: function () {
 
