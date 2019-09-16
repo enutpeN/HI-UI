@@ -10,55 +10,50 @@ Page({
     scrolLeft:[
       { 'icon': 'icon-rexiao2 ft30 color-ff0 mr10', 'name': '热销','num':0,
         scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '蛋炒饭', 'sku': '大份', id:1,'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
           
           ]
        },
       {
         'icon': 'icon-zhekou ft30 color-f37 mr10', 'name': '折扣', 'num': 0,
         scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '小炒黄牛肉', 'sku': '野山椒 (中辣)、', id:2, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ]
       },
       {
         'icon': '', 'name': '小菜下饭', 'num': 0, scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '手撕包抄', 'sku': '小份', id:3, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
         'icon': '', 'name': '大吉大利', 'num': 0, scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '手撕鸡', 'sku': '超甜', id:4,'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ]},
       {
         'icon': '', 'name': '特价饮料', 'num': 0,scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '可乐', 'sku': '350Ml', id:5, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
         'icon': '', 'name': '大鱼大肉', 'num': 0,scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '红烧鱼', 'sku': '一条200g', id:6, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
         'icon': '', 'name': '精选汤汁', 'num': 0,scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '三鲜汤', 'sku': '中碗', id:7, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
       {
         'icon': '', 'name': '单加米饭', 'num': 0, scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '米饭大碗', 'sku': '200g', id:8, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '米饭中碗', 'sku': '150g', id:9, 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
+          { 'name': '米饭小碗', 'sku': '100g', id:10,'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
 
         ] },
-      {
-        'icon': '', 'name': '精选汤汁', 'num': 0, scrolRight: [
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
-          { 'name': '下饭口水鸭', 'sku': '(中辣)、野山椒 野鸭子 上等桂皮八角', 'mothbur': '666', 'pirce': 20.6, 'moPirce': 29.1,'num':0, },
-
-        ]},
+   
  
     ],
     scrolRight:[
@@ -204,7 +199,25 @@ Page({
     //把增加的商品加入到一个新的数组中 放入购物车内
     let newArr=this.data.catList
     let mu =  scrolLeft[index0].scrolRight[index]
-    newArr.push(mu)
+    //如果购物车数组不为空
+    if (newArr.length>0){
+      //循环购物车数组中每一项与现在点中的这一个数组对比
+      let flag=false
+      for (let i = 0; i < newArr.length;i++){
+        //如果选择加的这个项中id存在于购物车数组则此项的num加1 否则代表没有 push进数组
+        if (mu.id == newArr[i].id){
+          newArr[i].num+1;
+          flag=true
+          break
+        }
+      }
+      if (!flag){
+        newArr.push(mu)
+      }
+    } else {
+      newArr.push(mu)
+    }
+  
      //定义分类数组的总数和所有商品的总数
     let num = scrolLeft[index0].scrolRight[index].num
     let num0 = scrolLeft[index0].num
@@ -228,12 +241,26 @@ Page({
     let index = e.currentTarget.dataset.i
     //获取分类数组
     let scrolLeft = this.data.scrolLeft
-    //把增加的商品加入到一个新的数组中 放入购物车内
+    //获取购物车数组 和现在点击减少的数
     let newArr = this.data.catList
-    newArr[index].num = newArr[index].num-1
-    if (newArr[index].num==0){
-      newArr.splice(index,1)
-    }
+    let mu = scrolLeft[index0].scrolRight[index]
+      //循环购物车数组中每一项与现在点中的这一个数组对比
+      let flag = false
+     
+      for (let i = 0; i < newArr.length; i++) {
+        //如果选择加的这个项中id存在于购物车数组则此项的num加1 否则代表没有 push进数组
+        if (mu.id == newArr[i].id) {
+          newArr[i].num - 1;
+          if (newArr[i].num==1){
+            newArr.splice(i,1)
+          }
+          break
+        }
+      }
+      if (!flag) {
+        // newArr.push(mu)
+      }
+   
     //定义分类数组的总数和所有商品的总数
     let num = scrolLeft[index0].scrolRight[index].num
     let num0 = scrolLeft[index0].num
@@ -242,7 +269,7 @@ Page({
     scrolLeft[index0].num = num0
     scrolLeft[index0].scrolRight[index].num = num
     //重新渲染
-    this.setData({ scrolLeft: scrolLeft, catList:newArr })
+    this.setData({ scrolLeft: scrolLeft, catList: newArr})
     //计算总价格和总数量
     this.getTotalPrice()
   },
