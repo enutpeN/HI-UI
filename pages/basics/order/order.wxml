@@ -11,7 +11,7 @@
     <view class="ft24 ellipsis_one">公告：温馨提示:亲亲感谢，本店产品绝对绿色安全用户可以尽可放心...//</view>
     <view> <view class="orderIcon mr10">20减11</view> <view class="orderIcon mr10">50减21</view> <view class="orderIcon">100减35</view>  </view>
   </view>
-  <view class="onBtn ml20">关注</view>
+  <view class="onBtn ml20" catchtap="follow" style="{{follow?'color:#eee;background:#666;padding:5rpx;':''}}">{{follow?'已关注':'关注'}}</view>
 </view>
 <!-- 选项卡top -->
 <view>
@@ -59,7 +59,7 @@
                     <view>  <text class="ft30 bold color-ff0">￥{{item.pirce}}</text> <text class="ft24" style="text-decoration:line-through">￥{{item.moPirce}}</text> </view>
                     <view class="r-center-b-nw">
                       <view class="addBtn bold ft44" catchtap="minus" data-iz="{{indexL}}" data-i="{{index}}" wx:if="{{item.num>0}}">-</view>
-                      <view class="ml10 mr10">{{item.num>0?item.num:''}}</view>
+                      <view class="text-center" style="width:50rpx;">{{item.num>0?item.num:''}}</view>
                       <view class="addBtn bold ft44" catchtap="add" data-iz="{{indexL}}" data-i="{{index}}">+ </view>
                     </view>
                   </view>
@@ -157,7 +157,7 @@
     </scroll-view>
   </swiper-item>
 </swiper>
-<view class="footNav " wx:if="{{currentIndex==0}}"  style="z-index: 9999;">
+<view class="footNav " wx:if="{{currentIndex==0}}"  catchtap="showCat"  style="z-index: 1001;">
   <view class="position-r animated {{anim}} ">
       <image src="/image/wmxg.png" class="wmIcon " ></image>
       <view class="numbIcon" >{{totalNum}}</view>
@@ -168,13 +168,13 @@
       <view>另需要配送费￥2.5 | 支持自取</view>
     </view>
   <!-- </view> -->
-  <view class="foot-right bold ft32" style="{{totalPrice>=startPirec?'background:#f4c74a;color:#333':'background:#2f2f2f;'}} " >{{totalPrice>=startPirec?'去结算':startPirec+'元起送'}} </view>
+  <view class="foot-right bold ft32" catchtap="{{totalPrice>=startPirec?'submit':''}}" style="{{totalPrice>=startPirec?'background:#f4c74a;color:#333':'background:#2f2f2f;'}} " >{{totalPrice>=startPirec?'去结算':startPirec+'元起送'}} </view>
 </view>
 <!-- 购物车弹层 -->
-<view class="carPlan">
+<view class="carPlan" style="bottom:{{catBottom&&catList.length>0?'100rpx;':'-554rpx'}}; transition: bottom 0.2s linear;">
   <view class="r-center-l-nw catTop"> 
   <view>包装费</view> 
-  <view class="r-center-r-nw flex-1">
+  <view class="r-center-r-nw flex-1" catchtap="clearCat">
     <view class="iconfont ft30 icon-shanchu-copy"></view>
     <view>清空购物车</view>
   </view> 
@@ -184,10 +184,11 @@
       <view style="width:345rpx; mr40 ellipsis_one">{{item.name}}{{item.sku}}</view>
       <view>￥{{item.pirce}}</view>
       <view class="r-center-b-nw">
-        <view class="addBtn bold ft44" catchtap="minus" data-iz="{{indexL}}" data-i="{{index}}" wx:if="{{item.num>0}}">-</view>
-        <view class="ml10 mr10">{{item.num>0?item.num:''}}</view>
-        <view class="addBtn bold ft44" catchtap="add" data-iz="{{indexL}}" data-i="{{index}}">+ </view>
+        <view class="addBtn bold ft44" catchtap="catMinus" data-iz="{{indexL}}" data-i="{{index}}" wx:if="{{item.num>0}}">-</view>
+        <view class="text-center" style="width:50rpx">{{item.num>0?item.num:''}}</view>
+        <view class="addBtn bold ft44" catchtap="catAdd" data-iz="{{indexL}}" data-i="{{index}}">+ </view>
       </view>
     </view>
   </scroll-view>
 </view>
+<view class="mask" catchtap="showCat" wx:if="{{catBottom&&catList.length>0}}"></view>

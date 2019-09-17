@@ -93,13 +93,15 @@ Page({
     catList:[],
     currentIndex:0,
     choseIndex:0,
-    leftChose:0,
-    heightArr :[],
-    nowtitle:'热销',
-    totalPrice:0,
-    totalNum:0,
-    anim:'',
-    startPirec:20
+    leftChose:0,       //左菜单栏初始化索引
+    heightArr :[],     //小标题高度坐标数组
+    nowtitle:'热销',   //小标题
+    totalPrice:0,     //总价格
+    totalNum:0,       //外卖小哥点单总数量
+    anim:'',          //外卖小哥跳动
+    catBottom:false,      //购物车初始位置
+    startPirec:20,    //起送价
+    follow:false,     //是否关注
   },
 
   onLoad: function (options) {
@@ -268,11 +270,96 @@ Page({
     num = num -1
     scrolLeft[index0].num = num0
     scrolLeft[index0].scrolRight[index].num = num
+    //如果购物车数组无知关闭弹出系统
+    if (newArr.length <= 0) {
+      this.setData({ catBottom: false })
+    }
     //重新渲染
     this.setData({ scrolLeft: scrolLeft, catList: newArr})
     //计算总价格和总数量
     this.getTotalPrice()
   },
+
+  //购物车的加号事件
+  catAdd(e){
+    //获取购物车数组
+    let catList=this.data.catList
+    //获取商品数组
+    let scrolLeft = this.data.scrolLeft
+    //购物车加号所在索引
+    let index=e.currentTarget.dataset.i
+    //当前数量加一
+    // catList[index].num = catList[index].num+1
+    //循环商品数组
+    for (let i = 0; i < scrolLeft.length;i++){
+      for (let j = 0; j < scrolLeft[i].scrolRight.length;j++){
+         //如果商品id相同则加一
+        if (catList[index].id == scrolLeft[i].scrolRight[j].id){
+          scrolLeft[i].scrolRight[j].num = scrolLeft[i].scrolRight[j].num+1
+         }
+      }
+    }
+    //重新渲染
+    this.setData({ catList, scrolLeft})
+    //计算左边红标总数
+    this.getleftTotal()
+    //计算总价
+    this.getTotalPrice()
+  },
+  //购物车的加号事件
+  catMinus(e) {
+    //获取购物车数组
+    let catList = this.data.catList
+    //获取商品数组
+    let scrolLeft = this.data.scrolLeft
+    //购物车加号所在索引
+    let index = e.currentTarget.dataset.i
+    //如果数值等于一删除
+    console.log(catList[index].num)
+
+      //循环商品数组
+      for (let i = 0; i < scrolLeft.length; i++) {
+        for (let j = 0; j < scrolLeft[i].scrolRight.length; j++) {
+          //如果商品id相同则加一
+          if (catList[index].id == scrolLeft[i].scrolRight[j].id) {
+           
+            scrolLeft[i].scrolRight[j].num = scrolLeft[i].scrolRight[j].num - 1
+
+          }
+        }
+      } 
+    //购物车数量减少为0时删除该项
+    if (catList[index].num == 0) {
+      catList.splice(index, 1)
+    }
+    //如果购物车数组无知关闭弹出系统
+    if (catList.length<=0){
+      this.setData({ catBottom:false})
+    }
+    
+    //重新渲染
+    this.setData({ catList, scrolLeft })
+    //计算左边红标总数
+    this.getleftTotal()
+    //计算总价
+    this.getTotalPrice()
+  },
+
+
+  //计算分类选项总数
+  getleftTotal(e){
+    //获取商品数组
+    let scrolLeft = this.data.scrolLeft
+    let leftTotal=0
+    for (let i = 0; i < scrolLeft.length;i++){
+      for (let j = 0; j < scrolLeft[i].scrolRight.length;j++){
+        scrolLeft[i].num=0
+        scrolLeft[i].num += scrolLeft[i].scrolRight[j].num
+      }
+    }
+    this.setData({ scrolLeft})
+  },
+  
   //计算总价格
   getTotalPrice(e){
     //获取分类数组的索引 和当前商品所在数组索引
@@ -291,6 +378,64 @@ Page({
     this.setData({ totalPrice: totalPrice.toFixed(2), totalNum})
   },
   
+  //购物车弹出
+  showCat(e){
+    this.setData({ catBottom: !this.data.catBottom})
+  },
+  
+  //清空购物车
+  clearCat(e){
+    //获取商品和购物车数组
+    let catList = this.data.catList
+    let scrolLeft = this.data.scrolLeft
+    //清空购物车数组
+    catList=[]
+    //把商品所以个数归零
+    for (let i = 0; i < scrolLeft.length; i++) {
+      for (let j = 0; j < scrolLeft[i].scrolRight.length; j++) {
+          scrolLeft[i].scrolRight[j].num = 0
+      }
+    } 
+    //重新渲染
+    this.setData({ catList, scrolLeft ,catBottom:false})
+    //计算左边红标总数
+    this.getleftTotal()
+    //计算总价
+    this.getTotalPrice()
+  },
+
+  //提交订单  //请自己设置气阀
+  submit(e){
+    wx.showLoading({
+      title: '结算中',
+      icon:'none'
+    })
+    setTimeout(()=>{
+      wx.hideLoading()
+      wx.showModal({
+        title: '恭喜',
+        content: '模拟提交订单成功',
+        showCancel:false
+      })
+    },2000)
+  },
+  
+  //关注
+  follow(e){
+    if (!this.data.follow){
+      wx.showToast({
+        title: '关注成功',
+        icon: 'none'
+      })
+    }else{
+      wx.showToast({
+        title: '成功取关',
+        icon: 'none'
+      })
+    }
+  
+    this.setData({ follow: !this.data.follow})
+  },
   onReachBottom: function () {
 
   },
