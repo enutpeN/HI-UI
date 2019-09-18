@@ -1,0 +1,27 @@
+<hi-custom isBack="{{true}}" bgColor="bg-gradual-pink">
+  <view slot="backText">返回</view>
+  <view slot="content">通讯录</view>
+</hi-custom>
+<!-- 最外层 -->
+<view class="h-100">
+<!-- 搜索栏 -->
+ <search you-class="search"></search>
+<!-- 通讯栏主体 -->
+<scroll-view style="height:calc(100% - 228rpx);margin-top:100rpx;" scroll-y="{{true}}"  scroll-into-view="{{toView}}" scroll-with-animation scroll-anchoring enable-flex>
+  <view wx:for="{{directonryList}}" >
+    <view class="tilte pd20 box-border" id="tilte{{item.id}}">{{item.region}}</view>
+    <view wx:for="{{item.peoples}}" wx:for-item="peopleItem" class="mg20 pb20 box-border border-b--gray bold">{{peopleItem.name}}</view>
+  </view>
+</scroll-view>
+</view>
+<!-- 右边导航 -->
+<view class="rightNav">
+  <scroll-view class="rightBox" >
+    <view class="text-center pb10">
+      #
+    </view>
+    <view class="text-center pb10" wx:for="{{directonryList}}" catchtap="tapRight" data-i="{{item.id}}">
+      {{item.region}}
+    </view>
+  </scroll-view>
+</view>

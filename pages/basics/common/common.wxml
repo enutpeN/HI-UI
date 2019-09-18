@@ -58,7 +58,7 @@
   <htmltowxml text="{{tlite}}"  type="markdown"  highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
 </view>
 
-<!-- 栏目条页 -->
+<!-- 搜索栏页 -->
 <view wx:if="{{titleIndex=='3'}}">
 <hi-plan you-class="mt30" apiData="{{search_apiList_value}}" apiData_tow="{{search_apiList_value_tow}}" apiData_three="{{search_apiList_value_three}}" apiData_four="{{search_apiList_value_four}}"></hi-plan>
   <search you-class="mt50 mb30"></search>

@@ -53,7 +53,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 27,
+			"current": 28,
 			"list": [
 				{
 					"id": 0,
@@ -248,6 +248,13 @@
 					"id": 27,
 					"name": "pages/test/test",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "通讯录",
+					"pathName": "pages/basics/directory/directory",
 					"query": "",
 					"scene": null
 				}
