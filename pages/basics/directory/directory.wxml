@@ -3,11 +3,11 @@
   <view slot="content">通讯录</view>
 </hi-custom>
 <!-- 最外层 -->
-<view class="h-100">
+<view style="height:calc(100% - 228rpx);">
 <!-- 搜索栏 -->
  <search you-class="search"></search>
 <!-- 通讯栏主体 -->
-<scroll-view style="height:calc(100% - 228rpx);margin-top:100rpx;" scroll-y="{{true}}"  scroll-into-view="{{toView}}" scroll-with-animation scroll-anchoring enable-flex>
+<scroll-view  class="h-100 mt100"  scroll-y="{{true}}"  scroll-into-view="{{toView}}" scroll-with-animation scroll-anchoring enable-flex>
   <view wx:for="{{directonryList}}" >
     <view class="tilte pd20 box-border" id="tilte{{item.id}}">{{item.region}}</view>
     <view wx:for="{{item.peoples}}" wx:for-item="peopleItem" class="mg20 pb20 box-border border-b--gray bold">{{peopleItem.name}}</view>

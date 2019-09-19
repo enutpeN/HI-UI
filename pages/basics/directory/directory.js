@@ -33,7 +33,7 @@ Page({
     //设成scroll-view定位为当前ID
     this.setData({ toView: 'tilte' + id})
   },
-
+  //获取Dom高度
   onPullDownRefresh: function () {
 
   },
