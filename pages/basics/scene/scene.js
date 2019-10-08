@@ -40,6 +40,11 @@ Page({
           url: '/pages/basics/order/order',
         })
         break
+      case 2:
+        wx.navigateTo({
+          url: '/pages/basics/directory/directory',
+        })
+        break
     }
   },
 
