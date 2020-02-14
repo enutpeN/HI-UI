@@ -4,11 +4,16 @@
   <view class="r-center-c-nw">
     <image class="author_Img" src="https://img2.woyaogexing.com/2020/02/12/ef24f28561af4311b1c3bccd9a86c043!400x400.jpeg"></image>
   </view>
+  <view class="r-center-c-nw">
+    <view class="bold">死狗君 -kamikay</view>
+  </view>
   <text class="bold"> 
   本人前端菜鸡一个 喜欢与各位大佬交流 互相学习，此UI暂时是个人学习的作品，后续会持续更新 
   
-  如有疑问 联系请加微信 450588114 
+  如有疑问 请加微信 450588114 
   
   谢谢 o( =•ω•= )m 
+
+  ps：(本作品中 自定义顶部标题栏学习于colorUi组件 原作者:文晓港)
    </text>
 </view>

@@ -19,7 +19,7 @@ Component({
     },
     imgSrc:{//广告图路径
       type: String,
-      value: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566299139752&di=44e2dd710a0f43f99a33ee6c2fc0b17a&imgtype=0&src=http%3A%2F%2Fpic166.nipic.com%2Ffile%2F20180525%2F26246157_084559158081_2.jpg'
+      value: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1581683004241&di=9a46844a5fcda01ccfe3840b85202878&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20200205%2F06d62881086e470bbdf5e55606d3a7a4.jpeg'
     },
     imgHeight: {//广告图片高度（单位rpx）
       type: Number,
