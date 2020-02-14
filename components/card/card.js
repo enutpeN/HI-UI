@@ -3,6 +3,7 @@ Component({
     addGlobalClass: true,
     styleIsolation: 'shared'
   },
+  externalClasses: ['you-class'],
   lifetimes: {
     attached() {
       // 在组件实例进入页面节点树时执行

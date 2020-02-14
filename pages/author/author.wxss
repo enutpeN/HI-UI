@@ -1,0 +1,18 @@
+page{
+  background: #f5f5f5;
+}
+.author_Plan{
+  box-sizing: border-box;
+  margin: 50rpx 50rpx;
+  padding: 30rpx;
+  background: #fff;
+  width: 650rpx;
+  height: 900rpx;
+}
+.author_Img{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-bottom: 20rpx;
+}

@@ -1,7 +1,7 @@
 <view></view>
 <scroll-view class='pb100 pt170 animated fadeInDown w-100' style='height:1000rpx;background-image:url(http://q.img.soukong.cn/wld/about_top.jpg);background-size: cover;'>
 <view class='position-r' wx:for="{{aboutData}}">
-  <view class='about_item_bg animated fadeInLeft delay-{{item.time}}s' style='top:{{item.about_item_top}};left:{{item.about_item_left}};background-image: url({{item.about_item_color}});background-size: cover;'>
+  <view catchtap="jump" data-i="{{index}}" class='about_item_bg animated fadeInLeft delay-{{item.time}}s' style='top:{{item.about_item_top}};left:{{item.about_item_left}};background-image: url({{item.about_item_color}});background-size: cover;'>
   <view class='position-a ft34 bold ' style='left:{{item.about_text_left}};top:42%;color:var(--black)'>{{item.about_text}}</view>
   </view>
 </view>

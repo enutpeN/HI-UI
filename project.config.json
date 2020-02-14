@@ -246,8 +246,8 @@
 				},
 				{
 					"id": 27,
-					"name": "pages/test/test",
-					"pathName": "pages/test/test",
+					"name": "作者页面",
+					"pathName": "pages/author/author",
 					"query": "",
 					"scene": null
 				},

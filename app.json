@@ -18,7 +18,8 @@
     "pages/basics/shoppingCar/shoppingCar",
     "pages/basics/order/order",
     "pages/test/test",
-    "pages/basics/directory/directory"
+    "pages/basics/directory/directory",
+    "pages/author/author"
   ],
   "window": {
     "navigationStyle": "custom",

@@ -1,4 +1,4 @@
-  <view class='find_item ml30 pd30 mb20' style='hieght:{{cardHieght}}rpx;width:{{cardWidth}}rpx;' catchtap='cardTap' >
+  <view class='find_item mt30 ml30 pd30 mb20 you-class' style='hieght:{{cardHieght}}rpx;width:{{cardWidth}}rpx;' catchtap='cardTap' >
      <view>{{tilte}}</view>
      <image class='find_item_img mt20 mb20' src="{{imsUrl}}"></image>
      <view class='r-center-l-nw'>
