@@ -1,6 +1,6 @@
 page{background-color: var(--ghostWhite)}
 .color-item{
-  width: 32%;
+  width: calc(665rpx / 3);
   background: #fff;
   border-radius: 10rpx;
   height: 235rpx;

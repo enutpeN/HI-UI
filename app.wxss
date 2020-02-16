@@ -86,7 +86,7 @@ page{
 	--greyShadow: rgba(114, 130, 138, 0.2);
 	--grayShadow: rgba(114, 130, 138, 0.2);
 	--blackShadow: rgba(26, 26, 26, 0.2);
-  --shadowColor:#e54d42;
+  --shadowColor:#93ccf1;
 
   font-size: 28rpx;
 }
