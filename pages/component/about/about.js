@@ -23,7 +23,7 @@ Component({
         'about_item_left': '100rpx',
         'about_item_top': '0rpx',
         'about_item_color': 'http://q.img.soukong.cn/wld/about_bg1.jpg',
-        'about_text_left': '-10%',
+        'about_text_left': '25%',
         'time': '05'
       },
       // { 'about_text': '关于-HIUI', 'about_item_left': '130rpx', 'about_item_top': '230rpx', 'about_item_color': 'http://q.img.soukong.cn/wld/about_bg2.jpg', 'about_text_left': '-10%', 'time': '1'},
@@ -32,7 +32,7 @@ Component({
         'about_item_left': '130rpx',
         'about_item_top': '230rpx',
         'about_item_color': 'http://q.img.soukong.cn/wld/about_bg3.jpg',
-        'about_text_left': '-10%',
+        'about_text_left': '30%',
         'time': '1'
       },
       {
@@ -40,7 +40,7 @@ Component({
         'about_item_left': '160rpx',
         'about_item_top': '460rpx',
         'about_item_color': 'http://q.img.soukong.cn/wld/about_bg4.jpg',
-        'about_text_left': '-10%',
+        'about_text_left': '35%',
         'time': '15'
       },
     ]
