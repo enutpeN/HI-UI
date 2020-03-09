@@ -25,6 +25,10 @@ Component({
       type: String,
       default: ''
     },
+    isbackIcon:{
+      type: String,
+      default: false
+    },
   },
 
   /**
