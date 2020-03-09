@@ -32,10 +32,6 @@
     <view slot="backText">返回</view>
     <view slot="content"  >演示</view>
   </hi-custom>
-   <hi-custom  isbackIcon="{{true}}" isCustom="{{true}}" bgColor="bg-top-2" you-class="dome1">
-    <view slot="backText">返回</view>
-    <view slot="content"  >演示</view>
-  </hi-custom>
 </view>
 
 <!-- 栏目条页 -->

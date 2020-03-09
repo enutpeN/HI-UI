@@ -16,7 +16,6 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
 }
 
 /* 自定义配色 */

@@ -3,15 +3,12 @@
   display: flex;
   align-items: center;
   padding-right: 220rpx;
-  z-index: 9999999;
+  z-index: 10000;
   min-height: 0px;
   position: fixed;
   top: 0;
   width: 100%;
   /* color: #fff; */
-}
-.zindMax{
-   z-index: 9999999;
 }
 .action {
 	display: flex;
